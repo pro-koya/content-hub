@@ -48,5 +48,15 @@
     "tone": "casual",
     "cta_type": "none",
     "posting_window": "14:39"
+  },
+  {
+    "date": "20260325",
+    "tweet_id": "2036679918428332317",
+    "text": "目標設定って、ただ数字を置くんじゃなくて「何のためにやるか」を問い直すことだよね。ベンチ100kgとか、ただの通過点というか。その先に何を見たいか、どうなりたいか。それこそが、自分で決めるべき一番大事な部分だと思うんだ。",
+    "archetype": "insight / ja",
+    "hook_style": "data-driven",
+    "tone": "philosophical",
+    "cta_type": "none",
+    "posting_window": "14:41"
   }
 ]
