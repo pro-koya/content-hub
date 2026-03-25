@@ -58,5 +58,15 @@
     "tone": "philosophical",
     "cta_type": "none",
     "posting_window": "14:41"
+  },
+  {
+    "date": "20260326",
+    "tweet_id": "2036920641727668705",
+    "text": "筋トレの記録って、結局「未来の自分」への手紙みたいなもんだよね。前回何キロでやったっけ？って迷わないだけでも集中できる。データってただの数字じゃなくて、過去の自分がくれたヒントなんだなって思う。なんていうか、対話してる感じ。",
+    "archetype": "insight / ja",
+    "hook_style": "question",
+    "tone": "balanced",
+    "cta_type": "none",
+    "posting_window": "06:38"
   }
 ]
