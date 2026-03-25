@@ -1,0 +1,67 @@
+# Content Hub - 開発ルール・学習蓄積
+
+## Phase 1 で得た学習
+
+### 技術的な教訓
+1. **yaml.safe_load の None 対策**: 空ファイルや不正YAMLで `None` が返る。常に `or {}` で正規化する
+2. **カテゴリラベルの動的対応**: 固定辞書だけでなく、未知のカテゴリキーもフォールバック表示する設計にする
+3. **テンプレートエンジンの統一**: Jinja2 を使う箇所と `str.replace` が混在すると保守性が下がる。Jinja2 に統一する
+4. **python vs python3**: macOS では `python` がない場合がある。CI では問題ないが、ローカルテストは `python3` を使う
+
+### 設計原則
+1. **import パス**: `from src.xxx import` パターンはリポジトリルートで実行する前提で動作する
+2. **CLI 拡張性**: `COMMANDS` 辞書パターンで新コマンドを追加しやすい構造にした
+3. **モジュール分離**: collectors/ (入力) → digest/ (処理) → dashboard/ (出力) の3層構造
+4. **GitHub Actions**: `contents: write` + `pages: write` の permissions が必要
+
+### Phase 2 で得た学習
+
+#### 技術的な教訓
+1. **ROOT パスの計算**: `Path(__file__).resolve().parent.parent.parent` でリポジトリルートに到達。モジュールの深さに応じて parent の数が変わるので注意
+2. **環境変数 GITHUB_WORKSPACE**: CI環境ではファイルI/Oのベースパスを `GITHUB_WORKSPACE` に合わせる必要がある（poster.py で対応済み）
+3. **import の private 関数**: `_is_cta` のように `_` prefix の関数もモジュール間で使う場合がある。Phase 3 で public API を整理する
+4. **dry-run の CLI パース**: `--dry-run` を boolean フラグとして扱うには、CLI パーサで `"true"` 文字列と比較する形になる
+
+#### 設計原則の確認
+1. **COMMANDS 辞書パターン**: Phase 1 で作った構造がそのまま機能し、4コマンド追加がスムーズだった
+2. **モジュール間依存**: `generator.py` → `lint.py` の依存は適切。`poster.py` → `lint.py` も `parse_output_file` のみで軽量
+3. **config パスの変更**: `config.json` → `config/x_post.json` に移動したので、generator.py 内のパスを更新済み
+
+### Phase 3 で得た学習
+
+#### 技術的な教訓
+1. **推論ベースの比較軸**: 投稿本文からhook_style/toneを正規表現で推定する方式を採用。完全ではないが、手動入力不要で運用コストゼロ
+2. **データ駆動のプロンプト注入**: `get_prompt_insights()` で分析結果を自然言語化し、次回生成プロンプトに自動注入。フィードバックループが閉じた
+3. **遅延import**: `generator.py` 内で `from src.x_post.experiment import` を関数内で行い、循環参照を回避
+4. **テストデータの作成**: 実際のAPIなしでも `data/` に JSON を手動配置してモジュールテストが可能
+
+#### 設計原則
+1. **軽量化の判断**: x-post の複雑な SQLite スキーマ（6テーブル）を JSON ベースの分析に置き換えた。運用データが数百件程度ならこれで十分
+2. **レポート出力先**: `docs/x-reports/` に Markdown で保存し、GitHub Pages で閲覧可能
+
+### Phase 4 で得た学習
+
+#### 技術的な教訓
+1. **API vs RSS**: Qiita は API v2 でストック数フィルタが可能。note は RSS が充実。X は Bearer Token で検索可能
+2. **レート制限対策**: Qiita 60req/h（認証なし）、X 10,000tweets/month。各コレクターに sleep() を入れてレート制限を回避
+3. **SPECIAL_COLLECTORS パターン**: `_fetch_special()` でカテゴリ名から適切なコレクターにディスパッチ。RSS 以外のソースを同じダイジェストパイプラインに統合
+4. **フォールバック設計**: X API 未設定時は `None` を返して静かにスキップ。CI で動作しない新ソースが全体を壊さない
+5. **重複排除**: 複数タグから同じ記事を取得する可能性があるため、`seen_ids` で重複を排除
+
+### Phase 5 で得た学習
+
+#### 技術的な教訓
+1. **frontmatter パース**: 正規表現で `---` 区切りの YAML frontmatter を解析。yaml.safe_load よりシンプルで十分
+2. **ダッシュボードのデータ収集**: `_get_*` ヘルパー関数で各データソースの集計を分離。テンプレートに渡すデータが明確になる
+3. **Jinja2 テンプレートの条件分岐**: `{% if has_articles %}` パターンで空状態と有データ状態を切り替え
+
+## プロジェクト全体の設計原則（5フェーズで確立）
+
+1. **CLI COMMANDS 辞書パターン**: 新機能は `cmd_xxx` 関数 + COMMANDS 辞書への追加のみで拡張可能
+2. **遅延 import**: CLI 関数内で `from src.xxx import` を行い、未使用モジュールの依存エラーを回避
+3. **yaml.safe_load は `or {}` で正規化**: 空ファイルや不正 YAML 対策
+4. **カテゴリラベルのフォールバック**: `CATEGORY_LABELS.get(key, key)` で未知カテゴリもレンダリング可能
+5. **テンプレートエンジン統一**: 全 HTML 生成は Jinja2
+6. **SPECIAL_COLLECTORS ディスパッチ**: RSS 以外のソースはカテゴリ名で適切なコレクターにルーティング
+7. **推論ベースのメタデータ**: 投稿の hook_style/tone を正規表現で自動推定。手動入力不要
+8. **フィードバックループ**: メトリクス → 分析 → プロンプト注入 → 次回生成の自動サイクル

@@ -1,0 +1,8 @@
+{
+  "default_count": 3,
+  "max_chars": 280,
+  "max_hashtags": 2,
+  "cta_ratio": 0.2,
+  "model": "gemini-2.5-flash",
+  "dry_run": false
+}

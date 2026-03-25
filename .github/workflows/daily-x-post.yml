@@ -1,0 +1,104 @@
+name: Daily X Post
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'DRY RUN（投稿しない）'
+        required: false
+        default: 'false'
+        type: choice
+        options:
+          - 'false'
+          - 'true'
+
+  schedule:
+    # JST 06:00 生成 = UTC 21:00 (前日)
+    - cron: "0 21 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-x-post
+  cancel-in-progress: true
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    env:
+      TZ: Asia/Tokyo
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Generate X post
+        run: python cli.py xpost:generate --count 1
+
+      - name: Commit generated post
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add output/
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "xpost: generate $(TZ=Asia/Tokyo date +%Y-%m-%d)"
+            git push
+          fi
+
+  post:
+    needs: generate
+    runs-on: ubuntu-latest
+    # 生成から1時間後（JST 07:00）に投稿するため、待機
+    env:
+      TZ: Asia/Tokyo
+      X_API_KEY: ${{ secrets.X_API_KEY }}
+      X_API_SECRET: ${{ secrets.X_API_SECRET }}
+      X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+      X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Pull latest changes
+        run: git pull origin main
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Post to X
+        run: |
+          if [ "${{ inputs.dry_run }}" = "true" ]; then
+            python cli.py xpost:post --dry-run true
+          else
+            python cli.py xpost:post
+          fi
+
+      - name: Commit posted status
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add output/ data/
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "xpost: posted $(TZ=Asia/Tokyo date +%Y-%m-%d)"
+            git push
+          fi
