@@ -1,6 +1,16 @@
 {
   "posts": [
     {
+      "tweet_id": "003",
+      "date": "20260322",
+      "text": "AI時代に哲学がどう生きるか？筋トレも同じで、何を大事にするかは自分で決める。なんていうか、選ぶほうは人間の仕事だよね。",
+      "archetype": "personal_opinion / ja",
+      "like_count": 25,
+      "retweet_count": 8,
+      "reply_count": 4,
+      "engagement_score": 45
+    },
+    {
       "tweet_id": "001",
       "date": "20260320",
       "text": "やる気がある日にやる、から決まった曜日にやる、に変えただけなんだよね。結局これが大事。",
@@ -9,6 +19,16 @@
       "retweet_count": 5,
       "reply_count": 7,
       "engagement_score": 36
+    },
+    {
+      "tweet_id": "004",
+      "date": "20260323",
+      "text": "セット間の休憩、スマホでSNSみてない？目閉じて深呼吸3回してみて。ちょっとした選択の積み重ねがフォームになる。",
+      "archetype": "tip / ja",
+      "like_count": 15,
+      "retweet_count": 4,
+      "reply_count": 3,
+      "engagement_score": 26
     },
     {
       "tweet_id": "002",
@@ -21,25 +41,25 @@
       "engagement_score": 20
     },
     {
-      "tweet_id": "003",
-      "date": "20260322",
-      "text": "AI時代に哲学がどう生きるか？筋トレも同じで、何を大事にするかは自分で決める。なんていうか、選ぶほうは人間の仕事だよね。",
-      "archetype": "personal_opinion / ja",
-      "like_count": 25,
-      "retweet_count": 8,
-      "reply_count": 4,
-      "engagement_score": 45
+      "tweet_id": "2036679305103618313",
+      "date": "20260325",
+      "text": "今日のトレーニング、数値は良くなかったけど、なんかめちゃくちゃ効いた感覚がある。データも大事だけど、自分の身体の声を聞くってのも、めちゃくちゃ大事だよね。結局、どっちを信じるか、って自分で決めることなんだよな。",
+      "archetype": "insight / ja",
+      "like_count": 0,
+      "retweet_count": 0,
+      "reply_count": 0,
+      "engagement_score": 0
     },
     {
-      "tweet_id": "004",
-      "date": "20260323",
-      "text": "セット間の休憩、スマホでSNSみてない？目閉じて深呼吸3回してみて。ちょっとした選択の積み重ねがフォームになる。",
-      "archetype": "tip / ja",
-      "like_count": 15,
-      "retweet_count": 4,
-      "reply_count": 3,
-      "engagement_score": 26
+      "tweet_id": "2036679918428332317",
+      "date": "20260325",
+      "text": "目標設定って、ただ数字を置くんじゃなくて「何のためにやるか」を問い直すことだよね。ベンチ100kgとか、ただの通過点というか。その先に何を見たいか、どうなりたいか。それこそが、自分で決めるべき一番大事な部分だと思うんだ。",
+      "archetype": "insight / ja",
+      "like_count": 0,
+      "retweet_count": 0,
+      "reply_count": 0,
+      "engagement_score": 0
     }
   ],
-  "updated_at": "2026-03-24T00:00:00Z"
+  "updated_at": "2026-03-25T06:05:22.057557Z"
 }
