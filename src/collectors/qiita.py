@@ -6,8 +6,9 @@ API キー不要（レート制限: 認証なしで 60 req/hour）。
 
 from __future__ import annotations
 
+import os
 import time
-from dataclasses import dataclass
+from datetime import datetime, timedelta, timezone
 
 import requests
 
@@ -31,8 +32,9 @@ QIITA_TAGS = [
 ]
 
 
-def _api_get(endpoint: str, params: dict | None = None, api_key: str = "") -> list[dict]:
+def _api_get(endpoint: str, params: dict | None = None) -> list[dict]:
     headers = dict(_HEADERS)
+    api_key = os.environ.get("QIITA_ACCESS_TOKEN", "")
     if api_key:
         headers["Authorization"] = f"Bearer {api_key}"
 
@@ -44,48 +46,51 @@ def _api_get(endpoint: str, params: dict | None = None, api_key: str = "") -> li
             timeout=30,
         )
         if resp.status_code == 200:
-            return resp.json()
+            data = resp.json()
+            return data if isinstance(data, list) else []
         print(f"  [WARN] Qiita API {resp.status_code}: {resp.text[:200]}")
     except Exception as e:
         print(f"  [WARN] Qiita API error: {e}")
     return []
 
 
+def _parse_timestamp(created_at: str) -> int:
+    if not created_at:
+        return 0
+    try:
+        return int(datetime.fromisoformat(created_at.replace("Z", "+00:00")).timestamp())
+    except (ValueError, AttributeError):
+        return 0
+
+
 def fetch_trending(
-    since_timestamp: int,
+    since_timestamp: int = 0,
     limit: int = 10,
-    api_key: str = "",
 ) -> list[Article]:
-    """Qiita のストック数上位の記事を取得する。"""
+    """Qiita のストック数上位の新着記事を取得する。"""
     articles: list[Article] = []
+
+    lookback_date = datetime.now(timezone.utc) - timedelta(days=7)
+    date_str = lookback_date.strftime("%Y-%m-%d")
 
     params = {
         "page": "1",
-        "per_page": str(min(limit * 2, 100)),
-        "query": "stocks:>5",
+        "per_page": str(min(limit * 3, 100)),
+        "query": f"stocks:>3 created:>{date_str}",
     }
-    items = _api_get("items", params, api_key)
+    print(f"    Fetching Qiita trending (stocks:>3, since {date_str})")
+    items = _api_get("items", params)
 
     for item in items:
-        created_at = item.get("created_at", "")
-        try:
-            from datetime import datetime
-            ts = int(datetime.fromisoformat(created_at.replace("Z", "+00:00")).timestamp())
-        except (ValueError, AttributeError):
-            ts = 0
-
-        if ts < since_timestamp:
-            continue
-
+        ts = _parse_timestamp(item.get("created_at", ""))
         tags = [t.get("name", "") for t in item.get("tags", [])]
-        tag_str = ", ".join(tags[:3])
 
         articles.append(Article(
             id=item.get("id", ""),
             title=item.get("title", "(No Title)"),
             url=item.get("url", ""),
-            content=item.get("rendered_body", item.get("body", ""))[:2000],
-            feed_title=f"Qiita (@{item.get('user', {}).get('id', 'unknown')})",
+            content=item.get("rendered_body", item.get("body", ""))[:3000],
+            feed_title=f"Qiita (@{item.get('user', {}).get('id', 'unknown')}) [{', '.join(tags[:3])}]",
             category="QIITA_TRENDING",
             published=ts,
         ))
@@ -98,9 +103,8 @@ def fetch_by_tags(
     tags: list[str] | None = None,
     since_timestamp: int = 0,
     limit: int = 10,
-    api_key: str = "",
 ) -> list[Article]:
-    """指定タグの記事を取得する。"""
+    """指定タグの最新記事を取得する。"""
     if tags is None:
         tags = QIITA_TAGS
 
@@ -112,27 +116,20 @@ def fetch_by_tags(
         params = {
             "page": "1",
             "per_page": str(min(per_tag_limit * 2, 20)),
-            "query": f"tag:{tag} stocks:>3",
+            "query": f"tag:{tag}",
         }
-        items = _api_get("items", params, api_key)
+        items = _api_get("items", params)
 
         for item in items:
-            created_at = item.get("created_at", "")
-            try:
-                from datetime import datetime
-                ts = int(datetime.fromisoformat(created_at.replace("Z", "+00:00")).timestamp())
-            except (ValueError, AttributeError):
-                ts = 0
-
-            if ts < since_timestamp:
-                continue
+            ts = _parse_timestamp(item.get("created_at", ""))
+            item_tags = [t.get("name", "") for t in item.get("tags", [])]
 
             all_articles.append(Article(
                 id=item.get("id", ""),
                 title=item.get("title", "(No Title)"),
                 url=item.get("url", ""),
-                content=item.get("rendered_body", item.get("body", ""))[:2000],
-                feed_title=f"Qiita ({tag})",
+                content=item.get("rendered_body", item.get("body", ""))[:3000],
+                feed_title=f"Qiita ({tag}) [{', '.join(item_tags[:3])}]",
                 category="QIITA_TRENDING",
                 published=ts,
             ))

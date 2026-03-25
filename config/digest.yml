@@ -6,14 +6,15 @@
 # 全体設定
 global:
   # 合計最大記事数（朝30分で読める分量）
-  max_total_items: 30
+  max_total_items: 50
   # 対象範囲（過去N時間の記事）
   lookback_hours: 24
-  # 要約方法: extractive / llm
+  # 要約方法: auto / llm / extractive
+  # auto: LLM(Gemini)が使えれば使用、なければ extractive（推奨）
   # 環境変数 SUMMARIZER で上書き可能
-  summarizer: extractive
-  # 要約の文数（extractive時）
-  summary_sentences: 3
+  summarizer: auto
+  # 要約の文数
+  summary_sentences: 5
   # 出力先ディレクトリ
   output_dir: docs/digests
 

@@ -28,8 +28,8 @@ def _fetch_special(category: str, since_ts: int, limit: int) -> list[Article]:
         from src.collectors.qiita import fetch_trending
         return fetch_trending(since_timestamp=since_ts, limit=limit)
     elif category == "NOTE_TRENDING":
-        from src.collectors.note import fetch_from_rss
-        return fetch_from_rss(since_timestamp=since_ts, limit=limit)
+        from src.collectors.note import fetch_note_articles
+        return fetch_note_articles(since_timestamp=since_ts, limit=limit)
     elif category == "X_BUZZ":
         from src.collectors.x_trending import fetch_trending_posts
         return fetch_trending_posts(since_timestamp=since_ts, limit=limit)

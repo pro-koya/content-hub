@@ -183,15 +183,75 @@ def generate_article(topic: str, category: str = "") -> ArticleDraft | None:
     return draft
 
 
+def _render_article_html(draft: ArticleDraft, date_str: str) -> str:
+    """記事ドラフトの Markdown を HTML に変換する。"""
+    import markdown as md_lib
+    html_body = md_lib.markdown(draft.content, extensions=["extra", "sane_lists", "tables", "fenced_code"])
+
+    tags_html = " ".join(
+        f'<span style="display:inline-block;padding:0.15rem 0.5rem;border-radius:12px;'
+        f'font-size:0.8rem;background:rgba(88,166,255,0.15);color:#58a6ff;margin-right:0.3rem;">{t}</span>'
+        for t in draft.tags
+    )
+
+    return f"""<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{draft.title}</title>
+  <style>
+    :root {{ --bg: #0d1117; --fg: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; --card: #161b22; --green: #3fb950; }}
+    * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+    body {{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+           background: var(--bg); color: var(--fg); line-height: 1.8; padding: 2rem; max-width: 800px; margin: 0 auto; }}
+    h1 {{ font-size: 1.8rem; margin-bottom: 0.5rem; }}
+    h2 {{ font-size: 1.4rem; color: var(--accent); margin-top: 2rem; margin-bottom: 0.8rem; }}
+    h3 {{ font-size: 1.15rem; margin-top: 1.5rem; margin-bottom: 0.5rem; }}
+    p {{ margin: 0.8rem 0; }}
+    a {{ color: var(--accent); text-decoration: none; }}
+    a:hover {{ text-decoration: underline; }}
+    hr {{ border: none; border-top: 1px solid var(--border); margin: 1.5rem 0; }}
+    blockquote {{ border-left: 3px solid var(--accent); padding: 0.5rem 1rem; margin: 0.8rem 0;
+                 background: var(--card); border-radius: 0 6px 6px 0; color: var(--muted); }}
+    strong {{ color: var(--fg); }}
+    code {{ background: var(--card); padding: 0.15em 0.4em; border-radius: 4px; font-size: 0.9em; }}
+    pre {{ background: var(--card); padding: 1rem; border-radius: 6px; overflow-x: auto; margin: 1rem 0; }}
+    pre code {{ background: none; padding: 0; }}
+    ul, ol {{ padding-left: 1.5rem; margin: 0.5rem 0; }}
+    li {{ margin: 0.3rem 0; }}
+    .meta {{ color: var(--muted); font-size: 0.85rem; margin-bottom: 1.5rem; }}
+    .tags {{ margin: 0.5rem 0; }}
+    .back {{ display: inline-block; margin-bottom: 1rem; color: var(--accent); font-size: 0.9rem; }}
+    .footer {{ margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem; }}
+  </style>
+</head>
+<body>
+  <a href="../index.html" class="back">&larr; Dashboard に戻る</a>
+  <h1>{draft.title}</h1>
+  <div class="meta">
+    <span>{date_str}</span> &middot;
+    <span>{draft.category}</span> &middot;
+    <span style="text-transform:uppercase;color:{'var(--green)' if draft.status == 'published' else 'var(--muted)'};">{draft.status}</span>
+  </div>
+  <div class="tags">{tags_html}</div>
+  <hr>
+  {html_body}
+  <div class="footer"><p>Powered by content-hub</p></div>
+</body>
+</html>"""
+
+
 def save_article(draft: ArticleDraft) -> Path:
-    """記事ドラフトを docs/articles/ に保存する。"""
+    """記事ドラフトを docs/articles/ に HTML + Markdown で保存する。"""
     articles_dir = ROOT / "docs" / "articles"
     articles_dir.mkdir(parents=True, exist_ok=True)
 
     date_str = datetime.now(JST).strftime("%Y-%m-%d")
-    filename = f"{date_str}-{draft.slug}.md"
-    path = articles_dir / filename
+    slug = draft.slug or "untitled"
 
+    md_filename = f"{date_str}-{slug}.md"
+    md_path = articles_dir / md_filename
     frontmatter = f"""---
 title: "{draft.title}"
 category: "{draft.category}"
@@ -201,9 +261,15 @@ status: "{draft.status}"
 ---
 
 """
-    path.write_text(frontmatter + draft.content, encoding="utf-8")
-    print(f"記事ドラフト保存: {path}")
-    return path
+    md_path.write_text(frontmatter + draft.content, encoding="utf-8")
+
+    html_filename = f"{date_str}-{slug}.html"
+    html_path = articles_dir / html_filename
+    html = _render_article_html(draft, date_str)
+    html_path.write_text(html, encoding="utf-8")
+
+    print(f"記事ドラフト保存: {md_path} / {html_path}")
+    return html_path
 
 
 def list_articles() -> list[dict]:

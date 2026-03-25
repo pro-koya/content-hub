@@ -232,21 +232,68 @@ def generate_weekly_analysis(records: list[PostRecord] | None = None) -> str:
     return "\n".join(lines)
 
 
+def _render_analysis_html(md_content: str, date_str: str) -> str:
+    """分析レポートの Markdown を HTML に変換する。"""
+    import markdown as md_lib
+    html_body = md_lib.markdown(md_content, extensions=["extra", "sane_lists", "tables"])
+
+    return f"""<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>実験分析レポート - {date_str}</title>
+  <style>
+    :root {{ --bg: #0d1117; --fg: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; --card: #161b22; --green: #3fb950; }}
+    * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+    body {{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+           background: var(--bg); color: var(--fg); line-height: 1.7; padding: 2rem; max-width: 900px; margin: 0 auto; }}
+    h1 {{ font-size: 1.8rem; margin-bottom: 0.5rem; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }}
+    h2 {{ font-size: 1.3rem; color: var(--accent); margin-top: 2rem; margin-bottom: 0.8rem; }}
+    p {{ margin: 0.5rem 0; }}
+    a {{ color: var(--accent); text-decoration: none; }}
+    a:hover {{ text-decoration: underline; }}
+    hr {{ border: none; border-top: 1px solid var(--border); margin: 1.5rem 0; }}
+    blockquote {{ border-left: 3px solid var(--green); padding: 0.5rem 1rem; margin: 0.8rem 0;
+                 background: var(--card); border-radius: 0 6px 6px 0; }}
+    strong {{ color: var(--fg); }}
+    code {{ background: var(--card); padding: 0.15em 0.4em; border-radius: 4px; font-size: 0.9em; color: var(--green); }}
+    table {{ width: 100%; border-collapse: collapse; margin: 1rem 0; }}
+    th {{ background: var(--card); color: var(--accent); text-align: left; padding: 0.6rem 1rem; border: 1px solid var(--border); font-size: 0.9rem; }}
+    td {{ padding: 0.5rem 1rem; border: 1px solid var(--border); font-size: 0.9rem; }}
+    tr:hover td {{ background: rgba(88,166,255,0.05); }}
+    .back {{ display: inline-block; margin-bottom: 1rem; color: var(--accent); font-size: 0.9rem; }}
+    .footer {{ margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem; }}
+  </style>
+</head>
+<body>
+  <a href="../index.html" class="back">&larr; Dashboard に戻る</a>
+  {html_body}
+  <div class="footer"><p>Powered by content-hub</p></div>
+</body>
+</html>"""
+
+
 def save_analysis_report(report_md: str) -> Path:
-    """分析レポートを docs/x-reports/ に保存する。"""
+    """分析レポートを docs/x-reports/ に HTML + Markdown で保存する。"""
     reports_dir = ROOT / "docs" / "x-reports"
     reports_dir.mkdir(parents=True, exist_ok=True)
 
     now = datetime.now(JST)
     date_str = now.strftime("%Y-%m-%d")
 
-    report_path = reports_dir / f"analysis-{date_str}.md"
-    report_path.write_text(report_md, encoding="utf-8")
+    report_path_md = reports_dir / f"analysis-{date_str}.md"
+    report_path_md.write_text(report_md, encoding="utf-8")
 
-    latest_path = reports_dir / "latest.md"
-    latest_path.write_text(report_md, encoding="utf-8")
+    html = _render_analysis_html(report_md, date_str)
+    report_path_html = reports_dir / f"analysis-{date_str}.html"
+    report_path_html.write_text(html, encoding="utf-8")
 
-    return report_path
+    (reports_dir / "latest.md").write_text(report_md, encoding="utf-8")
+    (reports_dir / "latest.html").write_text(html, encoding="utf-8")
+    (reports_dir / "index.html").write_text(html, encoding="utf-8")
+
+    return report_path_html
 
 
 def get_prompt_insights(records: list[PostRecord] | None = None) -> str:

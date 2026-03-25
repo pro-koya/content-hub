@@ -21,9 +21,9 @@
     .card li.empty { color: var(--muted); font-style: italic; }
     .card a { color: var(--accent); text-decoration: none; }
     .card a:hover { text-decoration: underline; }
-    .btn { display: inline-block; margin: 0.5rem 0; padding: 0.5rem 1.2rem; background: var(--accent);
+    .card .btn, .btn { display: inline-block; margin: 0.5rem 0; padding: 0.5rem 1.2rem; background: var(--accent);
            color: var(--bg); border-radius: 6px; font-weight: bold; text-decoration: none; font-size: 0.9rem; }
-    .btn:hover { opacity: 0.9; text-decoration: none; }
+    .card .btn:hover, .btn:hover { opacity: 0.9; text-decoration: none; color: var(--bg); }
     .status { display: inline-block; padding: 0.15rem 0.5rem; border-radius: 12px; font-size: 0.8rem; font-weight: 600; }
     .status-active { background: rgba(63,185,80,0.15); color: var(--green); }
     .status-planned { background: rgba(210,153,34,0.15); color: var(--orange); }
@@ -54,10 +54,10 @@
         <div style="margin-bottom: 0.8rem;">
           <div style="display: flex; gap: 1.5rem; color: var(--muted); font-size: 0.85rem;">
             <span>投稿数: <strong style="color: var(--fg);">6</strong></span>
-            <span>平均ES: <strong style="color: var(--fg);">31.8</strong></span>
+            <span>平均ES: <strong style="color: var(--fg);">21.2</strong></span>
           </div>
         </div>
-        <a href="x-reports/latest.md" class="btn">Latest Analysis</a>
+        
         <ul>
           
           <li style="font-size: 0.85rem;">20260321 — 海外だとvelocity-based trainingが流行ってるらしい。数値に頼るか感覚に頼るか、ってのも結局自分で選...</li>
@@ -84,12 +84,7 @@
       <div class="card">
         <h2>📊 Experiment Analysis <span class="status status-active">Active</span></h2>
         
-        <a href="x-reports/latest.md" class="btn">Latest Report</a>
-        <ul>
-          
-          <li><a href="x-reports/analysis-2026-03-25.md">2026-03-25</a></li>
-          
-        </ul>
+        <p style="color: var(--muted); font-size: 0.9rem;">まだ分析レポートがありません。</p>
         
       </div>
     </div>

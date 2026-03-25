@@ -67,7 +67,7 @@ def _get_analysis_entries() -> list[dict]:
         return []
     return [
         {"name": f.name, "date": f.stem.replace("analysis-", "")}
-        for f in sorted(reports_dir.glob("analysis-*.md"), reverse=True)
+        for f in sorted(reports_dir.glob("analysis-*.html"), reverse=True)
     ]
 
 
@@ -88,7 +88,10 @@ def _get_article_entries() -> list[dict]:
                 title = t.group(1).strip()
             if s:
                 status = s.group(1).strip()
-        articles.append({"file": path.name, "title": title, "status": status})
+        html_file = path.stem + ".html"
+        html_path = articles_dir / html_file
+        link_file = html_file if html_path.exists() else path.name
+        articles.append({"file": link_file, "title": title, "status": status})
     return articles
 
 
@@ -144,9 +147,9 @@ DASHBOARD_TEMPLATE = """<!DOCTYPE html>
     .card li.empty { color: var(--muted); font-style: italic; }
     .card a { color: var(--accent); text-decoration: none; }
     .card a:hover { text-decoration: underline; }
-    .btn { display: inline-block; margin: 0.5rem 0; padding: 0.5rem 1.2rem; background: var(--accent);
+    .card .btn, .btn { display: inline-block; margin: 0.5rem 0; padding: 0.5rem 1.2rem; background: var(--accent);
            color: var(--bg); border-radius: 6px; font-weight: bold; text-decoration: none; font-size: 0.9rem; }
-    .btn:hover { opacity: 0.9; text-decoration: none; }
+    .card .btn:hover, .btn:hover { opacity: 0.9; text-decoration: none; color: var(--bg); }
     .status { display: inline-block; padding: 0.15rem 0.5rem; border-radius: 12px; font-size: 0.8rem; font-weight: 600; }
     .status-active { background: rgba(63,185,80,0.15); color: var(--green); }
     .status-planned { background: rgba(210,153,34,0.15); color: var(--orange); }
@@ -182,7 +185,7 @@ DASHBOARD_TEMPLATE = """<!DOCTYPE html>
             <span>平均ES: <strong style="color: var(--fg);">{{ xpost.avg_engagement }}</strong></span>
           </div>
         </div>
-        {% if has_analysis %}<a href="x-reports/latest.md" class="btn">Latest Analysis</a>{% endif %}
+        {% if has_analysis %}<a href="x-reports/latest.html" class="btn">Latest Analysis</a>{% endif %}
         <ul>
           {% for post in xpost.recent_posts %}
           <li style="font-size: 0.85rem;">{{ post.date }} — {{ post.text }}...</li>
@@ -209,7 +212,7 @@ DASHBOARD_TEMPLATE = """<!DOCTYPE html>
       <div class="card">
         <h2>📊 Experiment Analysis <span class="status status-active">Active</span></h2>
         {% if has_analysis %}
-        <a href="x-reports/latest.md" class="btn">Latest Report</a>
+        <a href="x-reports/latest.html" class="btn">Latest Report</a>
         <ul>
           {% for entry in analysis_entries %}
           <li><a href="x-reports/{{ entry.name }}">{{ entry.date }}</a></li>
