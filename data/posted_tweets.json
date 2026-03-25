@@ -38,5 +38,15 @@
     "retweet_count": 4,
     "reply_count": 3,
     "engagement_score": 26
+  },
+  {
+    "date": "20260325",
+    "tweet_id": "2036679305103618313",
+    "text": "今日のトレーニング、数値は良くなかったけど、なんかめちゃくちゃ効いた感覚がある。データも大事だけど、自分の身体の声を聞くってのも、めちゃくちゃ大事だよね。結局、どっちを信じるか、って自分で決めることなんだよな。",
+    "archetype": "insight / ja",
+    "hook_style": "reflection",
+    "tone": "casual",
+    "cta_type": "none",
+    "posting_window": "14:39"
   }
 ]
