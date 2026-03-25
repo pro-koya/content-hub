@@ -122,7 +122,29 @@ def post_to_x(dry_run: bool = False, project: str = "liftly") -> bool:
         return True
 
     client = _create_x_client()
-    response = client.create_tweet(text=text)
+    try:
+        response = client.create_tweet(text=text)
+    except tweepy.Unauthorized as e:
+        print("ERROR: X API 認証エラー (401 Unauthorized)", file=sys.stderr)
+        print("", file=sys.stderr)
+        print("以下を確認してください:", file=sys.stderr)
+        print("  1. X Developer Portal でアプリの権限が 'Read and Write' になっているか", file=sys.stderr)
+        print("     (User authentication settings > App permissions)", file=sys.stderr)
+        print("  2. 権限を変更した場合、Access Token と Secret を再生成したか", file=sys.stderr)
+        print("     (Keys and tokens > Access Token and Secret > Regenerate)", file=sys.stderr)
+        print("  3. GitHub Secrets の値が最新のキーと一致しているか", file=sys.stderr)
+        print(f"", file=sys.stderr)
+        print(f"Tweepy詳細: {e}", file=sys.stderr)
+        sys.exit(1)
+    except tweepy.Forbidden as e:
+        print("ERROR: X API 権限エラー (403 Forbidden)", file=sys.stderr)
+        print("  X API Free プランでは一部の機能が制限されています。", file=sys.stderr)
+        print(f"  Tweepy詳細: {e}", file=sys.stderr)
+        sys.exit(1)
+    except tweepy.TweepyException as e:
+        print(f"ERROR: X API エラー: {e}", file=sys.stderr)
+        sys.exit(1)
+
     tweet_id = response.data["id"]
     print(f"投稿完了: https://x.com/i/status/{tweet_id}")
 
