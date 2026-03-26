@@ -59,7 +59,17 @@
       "retweet_count": 0,
       "reply_count": 0,
       "engagement_score": 0
+    },
+    {
+      "tweet_id": "2036920641727668705",
+      "date": "20260326",
+      "text": "筋トレの記録って、結局「未来の自分」への手紙みたいなもんだよね。前回何キロでやったっけ？って迷わないだけでも集中できる。データってただの数字じゃなくて、過去の自分がくれたヒントなんだなって思う。なんていうか、対話してる感じ。",
+      "archetype": "insight / ja",
+      "like_count": 0,
+      "retweet_count": 0,
+      "reply_count": 0,
+      "engagement_score": 0
     }
   ],
-  "updated_at": "2026-03-25T06:48:38.962869Z"
+  "updated_at": "2026-03-26T06:54:53.527214Z"
 }
