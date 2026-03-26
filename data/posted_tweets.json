@@ -68,5 +68,23 @@
     "tone": "balanced",
     "cta_type": "none",
     "posting_window": "06:38"
+  },
+  {
+    "date": "20260327",
+    "tweet_id": "2037281188188913747",
+    "text": "「プロンプトだけでコード生成」のvibe codingが広まる一方、品質劣化や保守困難が課題に。そこで再注目されるのが「spec駆動開発」。自然言語の揮発性を補い、チームで設計意図を共有する。AIと共存するコード管理の新しい形。",
+    "archetype": "archetype / ja",
+    "project": "content_hub",
+    "hook_style": "statement",
+    "tone": "balanced",
+    "cta_type": "none",
+    "posting_window": "06:31",
+    "posted_at": "2026-03-27T06:31:00+09:00",
+    "content_pillar": "practical_take",
+    "target_audience": "AI駆動開発の実務者",
+    "source_category": "AI_DRIVEN_DEV",
+    "source_topic": "spec駆動開発",
+    "prompt_version": "",
+    "hypothesis": "「プロンプトだけ」のAIコーディングの課題に対し、Spec駆動開発が具体的な解決策となるという実務的な視点が響く。"
   }
 ]
