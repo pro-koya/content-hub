@@ -1,8 +1,19 @@
 {
+  "project": "content_hub",
   "default_count": 3,
   "max_chars": 280,
   "max_hashtags": 2,
   "cta_ratio": 0.2,
+  "candidate_count": 5,
+  "digest_topic_count": 5,
+  "focus_categories": [
+    "AI_DRIVEN_DEV",
+    "JAPAN_SIGNAL",
+    "AI_PRODUCT_SAAS",
+    "AGRICULTURE",
+    "CAREER_HYBRID"
+  ],
   "model": "gemini-2.5-flash",
+  "prompt_version": "growth-v2",
   "dry_run": false
 }

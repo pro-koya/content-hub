@@ -13,10 +13,21 @@ from dataclasses import dataclass, field
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
+from src.x_post.config import get_default_project
+
 ROOT = Path(__file__).resolve().parent.parent.parent
 JST = timezone(timedelta(hours=9))
 
-AXIS_KEYS = ["hook_style", "tone", "cta_type", "posting_window", "archetype"]
+AXIS_KEYS = [
+    "hook_style",
+    "tone",
+    "cta_type",
+    "posting_window",
+    "archetype",
+    "content_pillar",
+    "source_category",
+    "target_audience",
+]
 
 
 @dataclass
@@ -25,10 +36,16 @@ class PostRecord:
     date: str
     text: str
     archetype: str
+    project: str = ""
     hook_style: str = ""
     tone: str = ""
     cta_type: str = ""
     posting_window: str = ""
+    content_pillar: str = ""
+    target_audience: str = ""
+    source_category: str = ""
+    source_topic: str = ""
+    prompt_version: str = ""
     like_count: int = 0
     retweet_count: int = 0
     reply_count: int = 0
@@ -106,7 +123,20 @@ def infer_posting_window(date_str: str) -> str:
                 return "night"
         except ValueError:
             pass
+    if re.match(r"^\d{2}:\d{2}$", date_str):
+        hour = int(date_str.split(":", 1)[0])
+        if 5 <= hour < 12:
+            return "morning"
+        elif 12 <= hour < 17:
+            return "afternoon"
+        elif 17 <= hour < 22:
+            return "evening"
+        return "night"
     return "morning"
+
+
+def _normalized_project(tweet: dict) -> str:
+    return str(tweet.get("project") or "liftly")
 
 
 def enrich_post_record(tweet: dict) -> PostRecord:
@@ -117,10 +147,16 @@ def enrich_post_record(tweet: dict) -> PostRecord:
         date=tweet.get("date", ""),
         text=text,
         archetype=tweet.get("archetype", ""),
+        project=_normalized_project(tweet),
         hook_style=tweet.get("hook_style") or infer_hook_style(text),
         tone=tweet.get("tone") or infer_tone(text),
         cta_type=tweet.get("cta_type") or infer_cta_type(text),
-        posting_window=tweet.get("posting_window") or infer_posting_window(tweet.get("date", "")),
+        posting_window=tweet.get("posting_window") or infer_posting_window(tweet.get("posted_at", "") or tweet.get("date", "")),
+        content_pillar=tweet.get("content_pillar", ""),
+        target_audience=tweet.get("target_audience", ""),
+        source_category=tweet.get("source_category", ""),
+        source_topic=tweet.get("source_topic", ""),
+        prompt_version=tweet.get("prompt_version", ""),
         like_count=int(tweet.get("like_count", 0)),
         retweet_count=int(tweet.get("retweet_count", 0)),
         reply_count=int(tweet.get("reply_count", 0)),
@@ -128,7 +164,7 @@ def enrich_post_record(tweet: dict) -> PostRecord:
     )
 
 
-def load_enriched_records() -> list[PostRecord]:
+def load_enriched_records(project: str | None = None) -> list[PostRecord]:
     """posted_tweets + metrics を統合し、比較軸付きの PostRecord リストを返す。"""
     metrics_path = ROOT / "data" / "post_metrics.json"
     tweets_path = ROOT / "data" / "posted_tweets.json"
@@ -149,7 +185,10 @@ def load_enriched_records() -> list[PostRecord]:
         except (json.JSONDecodeError, OSError):
             pass
 
-    return [enrich_post_record(p) for p in posts_data]
+    records = [enrich_post_record(p) for p in posts_data]
+    if project:
+        records = [record for record in records if record.project == project]
+    return records
 
 
 def analyze_axis(records: list[PostRecord], axis: str) -> list[AxisAnalysis]:
@@ -210,6 +249,9 @@ def generate_weekly_analysis(records: list[PostRecord] | None = None) -> str:
             "cta_type": "CTA種別",
             "posting_window": "投稿時間帯",
             "archetype": "アーキタイプ",
+            "content_pillar": "コンテンツピラー",
+            "source_category": "ニュースカテゴリ",
+            "target_audience": "ターゲット読者",
         }.get(axis, axis)
 
         lines.append(f"## {axis_label}")
@@ -296,21 +338,27 @@ def save_analysis_report(report_md: str) -> Path:
     return report_path_html
 
 
-def get_prompt_insights(records: list[PostRecord] | None = None) -> str:
+def get_prompt_insights(records: list[PostRecord] | None = None, project: str | None = None) -> str:
     """分析結果からプロンプトに注入するインサイトを生成する。"""
     if records is None:
-        records = load_enriched_records()
+        records = load_enriched_records(project=project or get_default_project())
 
     if len(records) < 3:
         return ""
 
     insights = ["## 過去の分析から得た傾向（参考にすること）", ""]
 
-    for axis in ["hook_style", "tone", "archetype"]:
+    for axis in ["hook_style", "tone", "archetype", "content_pillar", "source_category"]:
         analysis = analyze_axis(records, axis)
         if analysis and analysis[0].count >= 2:
             best = analysis[0]
-            axis_label = {"hook_style": "フックスタイル", "tone": "トーン", "archetype": "アーキタイプ"}.get(axis, axis)
+            axis_label = {
+                "hook_style": "フックスタイル",
+                "tone": "トーン",
+                "archetype": "アーキタイプ",
+                "content_pillar": "コンテンツピラー",
+                "source_category": "ニュースカテゴリ",
+            }.get(axis, axis)
             insights.append(f"- **{axis_label}**: `{best.value}` が最も反応が良い（平均ES: {best.avg_engagement}、{best.count}件）")
 
     if len(insights) > 2:

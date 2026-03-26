@@ -11,6 +11,7 @@ from pathlib import Path
 
 import tweepy
 
+from src.x_post.config import get_default_project
 from src.x_post.lint import parse_output_file
 
 _REPO_ROOT = Path(__file__).resolve().parent.parent.parent
@@ -22,8 +23,9 @@ def _today_str() -> str:
     return datetime.now(JST).strftime("%Y%m%d")
 
 
-def _find_today_file(project: str = "liftly") -> Path | None:
-    path = ROOT / "output" / f"{project}_{_today_str()}.md"
+def _find_today_file(project: str | None = None) -> Path | None:
+    project_name = project or get_default_project()
+    path = ROOT / "output" / f"{project_name}_{_today_str()}.md"
     return path if path.exists() else None
 
 
@@ -42,12 +44,15 @@ def _mark_as_posted(path: Path, post_text: str) -> None:
     escaped = re.escape(first_line)
 
     pattern = re.compile(
-        r"(\*\*\[[^\]]+\]\*\*(?:\s*📷)?)\s*\n" + escaped,
+        r"(\*\*\[[^\]]+\]\*\*(?:\s*📷)?)(\s*\n<!--\s*meta:\s*\{.*?\}\s*-->)?\s*\n" + escaped,
+        re.DOTALL,
     )
     match = pattern.search(content)
     if match:
+        header = match.group(1)
+        meta_line = match.group(2) or ""
         old = match.group(0)
-        new = f"{match.group(1)} <!-- posted: {now} -->\n{first_line}"
+        new = f"{header} <!-- posted: {now} -->{meta_line}\n{first_line}"
         content = content.replace(old, new, 1)
         path.write_text(content, encoding="utf-8")
         print(f"投稿済みマークを追加: {path.name}")
@@ -55,22 +60,31 @@ def _mark_as_posted(path: Path, post_text: str) -> None:
         print("WARNING: 投稿済みマークの追加に失敗しました", file=sys.stderr)
 
 
-def _save_posted_tweet(tweet_id: str, text: str, archetype: str) -> None:
+def _save_posted_tweet(tweet_id: str, post: dict, project: str) -> None:
     from src.x_post.experiment import infer_hook_style, infer_tone, infer_cta_type
 
     data_dir = ROOT / "data"
     data_dir.mkdir(exist_ok=True)
     path = data_dir / "posted_tweets.json"
-    today = _today_str()
+    now = datetime.now(JST)
+    text = post["text"]
     entry = {
-        "date": today,
+        "date": _today_str(),
         "tweet_id": str(tweet_id),
         "text": text,
-        "archetype": archetype,
+        "archetype": post["archetype"],
+        "project": project,
         "hook_style": infer_hook_style(text),
         "tone": infer_tone(text),
         "cta_type": infer_cta_type(text),
-        "posting_window": datetime.now(JST).strftime("%H:%M"),
+        "posting_window": now.strftime("%H:%M"),
+        "posted_at": now.isoformat(timespec="seconds"),
+        "content_pillar": post.get("content_pillar", ""),
+        "target_audience": post.get("target_audience", ""),
+        "source_category": post.get("source_category", ""),
+        "source_topic": post.get("source_topic", ""),
+        "prompt_version": post.get("prompt_version", ""),
+        "hypothesis": post.get("hypothesis", ""),
     }
     if path.exists():
         try:
@@ -101,10 +115,11 @@ def _create_x_client() -> tweepy.Client:
     )
 
 
-def post_to_x(dry_run: bool = False, project: str = "liftly") -> bool:
-    path = _find_today_file(project)
+def post_to_x(dry_run: bool = False, project: str | None = None) -> bool:
+    project_name = project or get_default_project()
+    path = _find_today_file(project_name)
     if not path:
-        print(f"今日の output ファイルが見つかりません: {project}_{_today_str()}.md")
+        print(f"今日の output ファイルが見つかりません: {project_name}_{_today_str()}.md")
         return False
 
     post = _get_next_unposted(path)
@@ -149,5 +164,5 @@ def post_to_x(dry_run: bool = False, project: str = "liftly") -> bool:
     print(f"投稿完了: https://x.com/i/status/{tweet_id}")
 
     _mark_as_posted(path, text)
-    _save_posted_tweet(tweet_id=tweet_id, text=text, archetype=post["archetype"])
+    _save_posted_tweet(tweet_id=tweet_id, post=post, project=project_name)
     return True

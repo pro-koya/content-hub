@@ -7,8 +7,9 @@ import re
 from dataclasses import dataclass, field
 from pathlib import Path
 
+from src.x_post.config import get_default_project
+
 ROOT = Path(__file__).resolve().parent.parent.parent
-BANS_PATH = ROOT / "config" / "projects" / "liftly" / "bans.md"
 
 MAX_POST_LENGTH = 280
 CTA_PHRASES = [
@@ -17,6 +18,9 @@ CTA_PHRASES = [
     "iOS / Android 無料です",
     "iOS/Android 無料です",
     "気になったらプロフのリンクから",
+    "フォローしておいて",
+    "フォローで",
+    "必要ならフォロー",
 ]
 
 EMOJI_RE = re.compile(
@@ -36,20 +40,23 @@ EMOJI_RE = re.compile(
 )
 
 
-def _load_banned_words() -> list[str]:
-    if not BANS_PATH.exists():
+def _bans_path(project: str) -> Path:
+    return ROOT / "config" / "projects" / project / "bans.md"
+
+
+def _load_banned_words(project: str | None = None) -> list[str]:
+    project_name = project or get_default_project()
+    bans_path = _bans_path(project_name)
+    if not bans_path.exists():
         return []
     words: list[str] = []
-    for line in BANS_PATH.read_text(encoding="utf-8").splitlines():
+    for line in bans_path.read_text(encoding="utf-8").splitlines():
         line = line.strip()
         if line.startswith("- "):
             word = line[2:].strip()
             if word:
                 words.append(word)
     return words
-
-
-BANNED_WORDS = _load_banned_words()
 
 
 @dataclass
@@ -81,7 +88,7 @@ def _is_cta(text: str) -> bool:
 
 
 CTA_PROMO_RE = re.compile(
-    r"DL|ダウンロード|インストール|App\s*Store|ストア|リンク|入れてみて|使ってみて|無料で(?:入手|試)"
+    r"DL|ダウンロード|インストール|App\s*Store|ストア|リンク|入れてみて|使ってみて|無料で(?:入手|試)|フォロー"
 )
 
 BOT_OPENING_RE = re.compile(
@@ -111,9 +118,11 @@ def lint_post(
     index: int = 0,
     max_length: int | None = None,
     recent_texts: list[str] | None = None,
+    project: str | None = None,
 ) -> LintResult:
     result = LintResult(post_index=index, text=text)
     limit = max_length if max_length is not None else MAX_POST_LENGTH
+    banned_words = _load_banned_words(project)
 
     char_count = len(text)
     if char_count > limit:
@@ -132,7 +141,7 @@ def lint_post(
         result.errors.append(f"絵文字超過: {emoji_count}/2")
 
     text_lower = text.lower()
-    for word in BANNED_WORDS:
+    for word in banned_words:
         if word.lower() in text_lower:
             result.errors.append(f"禁止ワード検出: '{word}'")
 
@@ -163,9 +172,10 @@ def lint_batch(
     posts: list[str],
     max_length: int | None = None,
     recent_texts: list[str] | None = None,
+    project: str | None = None,
 ) -> list[LintResult]:
     results = [
-        lint_post(text, i, max_length=max_length, recent_texts=recent_texts)
+        lint_post(text, i, max_length=max_length, recent_texts=recent_texts, project=project)
         for i, text in enumerate(posts)
     ]
 
@@ -206,14 +216,28 @@ def parse_output_file(path: Path) -> list[dict]:
         posted = match.group(2)
 
         lines = block.split("\n")
+        metadata: dict = {}
         text_lines: list[str] = []
         for line in lines[1:]:
             if line.strip().startswith("> 画像案"):
                 break
+            meta_match = re.match(r"<!--\s*meta:\s*(\{.*\})\s*-->", line.strip())
+            if meta_match:
+                try:
+                    metadata = json.loads(meta_match.group(1))
+                except json.JSONDecodeError:
+                    metadata = {}
+                continue
             text_lines.append(line)
 
         text = "\n".join(text_lines).strip()
         if text:
-            posts.append({"archetype": archetype, "text": text, "posted": posted})
+            posts.append({
+                "archetype": archetype,
+                "text": text,
+                "posted": posted,
+                "meta": metadata,
+                **metadata,
+            })
 
     return posts

@@ -51,19 +51,23 @@ def cmd_digest_run(options: dict[str, str]) -> None:
 
 def cmd_xpost_generate(options: dict[str, str]) -> None:
     from src.x_post.generator import generate, save_output
+    from src.x_post.config import get_default_project
 
     count = int(options.get("count", "1"))
     dry_run = options.get("dry-run", "false") == "true"
-    posts = generate(count=count, dry_run=dry_run)
+    project = options.get("project", get_default_project())
+    posts = generate(count=count, dry_run=dry_run, project=project)
     if posts:
-        save_output(posts)
+        save_output(posts, project=project)
 
 
 def cmd_xpost_post(options: dict[str, str]) -> None:
+    from src.x_post.config import get_default_project
     from src.x_post.poster import post_to_x
 
     dry_run = options.get("dry-run", "false") == "true"
-    post_to_x(dry_run=dry_run)
+    project = options.get("project", get_default_project())
+    post_to_x(dry_run=dry_run, project=project)
 
 
 def cmd_xpost_metrics(_options: dict[str, str]) -> None:
@@ -73,9 +77,12 @@ def cmd_xpost_metrics(_options: dict[str, str]) -> None:
 
 
 def cmd_xpost_analyze(_options: dict[str, str]) -> None:
-    from src.x_post.experiment import generate_weekly_analysis, save_analysis_report
+    from src.x_post.config import get_default_project
+    from src.x_post.experiment import generate_weekly_analysis, load_enriched_records, save_analysis_report
 
-    report = generate_weekly_analysis()
+    project = _options.get("project", get_default_project())
+    records = load_enriched_records(project=project)
+    report = generate_weekly_analysis(records=records)
     path = save_analysis_report(report)
     print(f"分析レポート生成完了: {path}")
     print()
@@ -85,14 +92,16 @@ def cmd_xpost_analyze(_options: dict[str, str]) -> None:
 def cmd_xpost_lint(options: dict[str, str]) -> None:
     import json
     from pathlib import Path
+    from src.x_post.config import get_default_project
     from src.x_post.lint import parse_output_file, lint_batch
 
     output_dir = Path("output")
+    project = options.get("project", get_default_project())
     files = options.get("files", "")
     if files:
         paths = [Path(f) for f in files.split(",")]
     else:
-        paths = sorted(output_dir.glob("liftly_*.md"), reverse=True)[:1]
+        paths = sorted(output_dir.glob(f"{project}_*.md"), reverse=True)[:1]
 
     if not paths:
         print("チェック対象のファイルが見つかりません")
@@ -115,7 +124,7 @@ def cmd_xpost_lint(options: dict[str, str]) -> None:
             continue
 
         texts = [p["text"] for p in posts]
-        results = lint_batch(texts, max_length=max_length)
+        results = lint_batch(texts, max_length=max_length, project=project)
         for r in results:
             status = "OK" if r.ok else "NG"
             print(f"  [{status}] 投稿 {r.post_index + 1}: {r.text[:40]}...")
@@ -217,15 +226,18 @@ content-hub CLI
 コマンド一覧:
   digest:run [--config PATH]       ダイジェストを生成
   xpost:generate [--count N]       X投稿を生成（Gemini連携）
+               [--project NAME]
                [--dry-run]
-  xpost:post [--dry-run]           未投稿の投稿をXに投稿
+  xpost:post [--project NAME]      未投稿の投稿をXに投稿
+             [--dry-run]
   xpost:metrics                    投稿メトリクスを取得
-  xpost:analyze                     比較軸×メトリクス分析レポート
+  xpost:analyze [--project NAME]   比較軸×メトリクス分析レポート
   article:generate --topic TOPIC   記事ドラフトを生成（Gemini連携）
                [--category CAT]
   article:list                     記事一覧を表示
   article:lint [--file PATH]       記事ドラフトの品質チェック
   xpost:lint [--files PATHS]       投稿の品質チェック
+             [--project NAME]
   site:build                       GitHub Pages 用サイトを生成
   help                             このヘルプを表示
 """)
