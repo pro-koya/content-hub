@@ -126,6 +126,7 @@ def cmd_xpost_lint(options: dict[str, str]) -> None:
 
 
 def cmd_article_generate(options: dict[str, str]) -> None:
+    from src.articles.lint import lint_draft
     from src.articles.pipeline import generate_article, save_article
 
     topic = options.get("topic", "")
@@ -134,11 +135,60 @@ def cmd_article_generate(options: dict[str, str]) -> None:
         sys.exit(1)
     category = options.get("category", "")
     draft = generate_article(topic, category)
-    if draft:
-        save_article(draft)
-        print(f"\n記事ドラフト生成完了: {draft.title}")
-    else:
+    if not draft:
         print("記事生成に失敗しました")
+        sys.exit(1)
+
+    lint_result = lint_draft(draft)
+    if lint_result.errors:
+        print("記事生成に失敗しました。品質チェックでエラーが見つかりました。", file=sys.stderr)
+        for err in lint_result.errors:
+            print(f"  ERROR: {err}", file=sys.stderr)
+        sys.exit(1)
+
+    for warn in lint_result.warnings:
+        print(f"  WARN: {warn}")
+
+    save_article(draft)
+    print(f"\n記事ドラフト生成完了: {draft.title}")
+
+
+def cmd_article_lint(options: dict[str, str]) -> None:
+    from pathlib import Path
+    from src.articles.lint import lint_draft
+    from src.articles.pipeline import _parse_article_output
+
+    articles_dir = Path("docs/articles")
+    file_opt = options.get("file", "")
+    if file_opt:
+        paths = [Path(file_opt)]
+    else:
+        paths = sorted(articles_dir.glob("*.md"), reverse=True)[:1]
+
+    if not paths:
+        print("チェック対象の記事が見つかりません")
+        return
+
+    failed = False
+    for path in paths:
+        text = path.read_text(encoding="utf-8")
+        draft = _parse_article_output(text)
+        if not draft:
+            print(f"[NG] {path.name}: frontmatter の解析に失敗しました")
+            failed = True
+            continue
+        result = lint_draft(draft)
+        status = "OK" if result.ok else "NG"
+        print(f"[{status}] {path.name}")
+        for err in result.errors:
+            print(f"  ERROR: {err}")
+        for warn in result.warnings:
+            print(f"  WARN:  {warn}")
+        if not result.ok:
+            failed = True
+
+    if failed:
+        sys.exit(1)
 
 
 def cmd_article_list(_options: dict[str, str]) -> None:
@@ -174,6 +224,7 @@ content-hub CLI
   article:generate --topic TOPIC   記事ドラフトを生成（Gemini連携）
                [--category CAT]
   article:list                     記事一覧を表示
+  article:lint [--file PATH]       記事ドラフトの品質チェック
   xpost:lint [--files PATHS]       投稿の品質チェック
   site:build                       GitHub Pages 用サイトを生成
   help                             このヘルプを表示
@@ -187,6 +238,7 @@ COMMANDS = {
     "xpost:metrics": cmd_xpost_metrics,
     "article:generate": cmd_article_generate,
     "article:list": cmd_article_list,
+    "article:lint": cmd_article_lint,
     "xpost:analyze": cmd_xpost_analyze,
     "xpost:lint": cmd_xpost_lint,
     "site:build": cmd_site_build,
