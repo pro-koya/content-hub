@@ -86,5 +86,23 @@
     "source_topic": "spec駆動開発",
     "prompt_version": "",
     "hypothesis": "「プロンプトだけ」のAIコーディングの課題に対し、Spec駆動開発が具体的な解決策となるという実務的な視点が響く。"
+  },
+  {
+    "date": "20260328",
+    "tweet_id": "2037644261232124047",
+    "text": "日本8万の神社仏閣、8割の観光収益が5%に集中。この構造課題をAI×Solana「参拝マイニング」で再設計。これ、単なる観光テックじゃない。AIで『不均衡なリソース配分』を解決する思考、あなたの業界にも応用できる部分、見つかる？",
+    "archetype": "digest_take / ja",
+    "project": "content_hub",
+    "hook_style": "question",
+    "tone": "balanced",
+    "cta_type": "none",
+    "posting_window": "06:33",
+    "posted_at": "2026-03-28T06:33:44+09:00",
+    "content_pillar": "digest_take",
+    "target_audience": "AI駆動開発の実務者",
+    "source_category": "AI_DRIVEN_DEV",
+    "source_topic": "参拝マイニング",
+    "prompt_version": "growth-v2",
+    "hypothesis": "AI/Web3による社会課題解決の視点を提供し、自業界への応用を促すことでエンゲージメントを高める。"
   }
 ]
