@@ -197,7 +197,29 @@
       "retweet_count": 0,
       "reply_count": 0,
       "engagement_score": 0
+    },
+    {
+      "tweet_id": "2038005475699024317",
+      "date": "20260329",
+      "text": "非エンジニアがChatGPTとの対話だけでアプリ開発に成功。「理論より『完成』を優先」するこのアプローチは、AIが開発のハードルを劇的に下げたことを示す。 誰もがアイデアを形にできる時代へ。まず動かす、それがキャリアを切り拓く第一歩になる。🚀 #AI開発",
+      "archetype": "career_angle / ja",
+      "project": "content_hub",
+      "hook_style": "statement",
+      "tone": "balanced",
+      "cta_type": "none",
+      "posting_window": "06:29",
+      "posted_at": "2026-03-29T06:29:04+09:00",
+      "content_pillar": "career_angle",
+      "target_audience": "非エンジニア、AI活用に関心があるビジネスパーソン",
+      "source_category": "AI_DRIVEN_DEV",
+      "source_topic": "非エンジニアによるAIを使ったアプリ開発",
+      "prompt_version": "",
+      "hypothesis": "非エンジニアでもAI（ChatGPT）を使えばアプリ開発が可能という具体例は、キャリアの可能性を広げたい層に響き、行動を促すきっかけになるはず。",
+      "like_count": 0,
+      "retweet_count": 0,
+      "reply_count": 0,
+      "engagement_score": 0
     }
   ],
-  "updated_at": "2026-03-28T06:43:07.399425Z"
+  "updated_at": "2026-03-29T06:50:42.425158Z"
 }
