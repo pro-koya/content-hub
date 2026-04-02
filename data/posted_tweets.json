@@ -176,5 +176,23 @@
     "source_topic": "Claude CodeスキルでZenn記事自動化",
     "prompt_version": "growth-v2",
     "hypothesis": "AIツールの拡張機能による具体的な業務自動化事例を提示し、読者が自身の業務に応用できるヒントを与える。"
+  },
+  {
+    "date": "20260403",
+    "tweet_id": "2039819336920060382",
+    "text": "AIアプリのプロンプトインジェクション対策。一見すると防御の話だが、本質は「攻撃者の視点」をどこまで持てるか。SWGのAIゲートウェイ機能検証のように、意図的に脆弱なテスト環境を作る発想が、AIセキュリティの最前線だ。",
+    "archetype": "contrarian / ja",
+    "project": "content_hub",
+    "hook_style": "statement",
+    "tone": "balanced",
+    "cta_type": "none",
+    "posting_window": "06:36",
+    "posted_at": "2026-04-03T06:36:42+09:00",
+    "content_pillar": "contrarian",
+    "target_audience": "AI駆動開発の実務者",
+    "source_category": "AI_DRIVEN_DEV",
+    "source_topic": "AIセキュリティ（プロンプトインジェクション）",
+    "prompt_version": "growth-v2",
+    "hypothesis": "一般的な認識の逆をいく視点を提示することで、読者の興味を引き、思考を深めるきっかけとなる。"
   }
 ]
