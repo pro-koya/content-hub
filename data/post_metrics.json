@@ -285,7 +285,29 @@
       "retweet_count": 0,
       "reply_count": 0,
       "engagement_score": 0
+    },
+    {
+      "tweet_id": "2039819336920060382",
+      "date": "20260403",
+      "text": "AIアプリのプロンプトインジェクション対策。一見すると防御の話だが、本質は「攻撃者の視点」をどこまで持てるか。SWGのAIゲートウェイ機能検証のように、意図的に脆弱なテスト環境を作る発想が、AIセキュリティの最前線だ。",
+      "archetype": "contrarian / ja",
+      "project": "content_hub",
+      "hook_style": "statement",
+      "tone": "balanced",
+      "cta_type": "none",
+      "posting_window": "06:36",
+      "posted_at": "2026-04-03T06:36:42+09:00",
+      "content_pillar": "contrarian",
+      "target_audience": "AI駆動開発の実務者",
+      "source_category": "AI_DRIVEN_DEV",
+      "source_topic": "AIセキュリティ（プロンプトインジェクション）",
+      "prompt_version": "growth-v2",
+      "hypothesis": "一般的な認識の逆をいく視点を提示することで、読者の興味を引き、思考を深めるきっかけとなる。",
+      "like_count": 0,
+      "retweet_count": 0,
+      "reply_count": 0,
+      "engagement_score": 0
     }
   ],
-  "updated_at": "2026-04-02T06:58:02.642844Z"
+  "updated_at": "2026-04-03T06:54:55.462585Z"
 }
