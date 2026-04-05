@@ -329,7 +329,29 @@
       "retweet_count": 0,
       "reply_count": 0,
       "engagement_score": 0
+    },
+    {
+      "tweet_id": "2040542405099766049",
+      "date": "20260405",
+      "text": "Claude Code、ステートレス設計ゆえにセッション履歴が毎回再送されAPI料が高騰しがち。コスト最適化には「対話履歴の要約」や「必要な情報だけ渡す」工夫が必須だ。AIエージェントの運用は、コード品質だけでなく「トークン消費」まで設計に含める時代へ。",
+      "archetype": "practical_take / ja",
+      "project": "content_hub",
+      "hook_style": "statement",
+      "tone": "balanced",
+      "cta_type": "none",
+      "posting_window": "06:29",
+      "posted_at": "2026-04-05T06:29:55+09:00",
+      "content_pillar": "practical_take",
+      "target_audience": "AI駆動開発の実務者",
+      "source_category": "AI_DRIVEN_DEV",
+      "source_topic": "Claude Codeで”トークン破産”しないためのコスト最適化とコンテキスト防衛術",
+      "prompt_version": "growth-v2",
+      "hypothesis": "AI利用のコスト問題は多くの実務者にとって切実な課題であり、具体的な対策は保存・共有に繋がる。",
+      "like_count": 0,
+      "retweet_count": 0,
+      "reply_count": 0,
+      "engagement_score": 0
     }
   ],
-  "updated_at": "2026-04-04T06:44:21.069045Z"
+  "updated_at": "2026-04-05T06:52:59.592343Z"
 }
