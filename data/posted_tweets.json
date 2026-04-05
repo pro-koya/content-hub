@@ -230,5 +230,23 @@
     "source_topic": "Claude Codeで”トークン破産”しないためのコスト最適化とコンテキスト防衛術",
     "prompt_version": "growth-v2",
     "hypothesis": "AI利用のコスト問題は多くの実務者にとって切実な課題であり、具体的な対策は保存・共有に繋がる。"
+  },
+  {
+    "date": "20260406",
+    "tweet_id": "2040904872841666750",
+    "text": "AIでコードが書けない人でも、スマホだけで10万行のターミナルIDEを開発。これは技術スキルそのものより「何を創りたいか」が重要になった証拠。AIが開発の民主化を進める中で、あなたのキャリア、何にフォーカスすべき？",
+    "archetype": "career_angle / ja",
+    "project": "content_hub",
+    "hook_style": "question",
+    "tone": "balanced",
+    "cta_type": "none",
+    "posting_window": "06:30",
+    "posted_at": "2026-04-06T06:30:14+09:00",
+    "content_pillar": "career_angle",
+    "target_audience": "AI駆動開発の実務者",
+    "source_category": "AI_DRIVEN_DEV",
+    "source_topic": "コードが書けない人間がスマホだけで10万行のターミナルIDEを作った話",
+    "prompt_version": "growth-v2",
+    "hypothesis": "AIが開発のハードルを下げ、非開発者でもアイデアを形にできる時代になりつつあることを示し、キャリア選択の示唆を与えることで共感を呼ぶと考える。"
   }
 ]
