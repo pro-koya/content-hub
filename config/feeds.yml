@@ -1,10 +1,38 @@
 # ============================================================
-# FreshRSS Feed Configuration
-# カテゴリ別にフィードURLを宣言的に管理
-# 全URL 2024-03 動作確認済み
+# Feed Configuration
+# QiitaとZennのRSSのみ（API不使用）
 # ============================================================
 
 categories:
+  QIITA_TRENDING:
+    description: "Qiita トレンド・タグ別記事（RSS）"
+    feeds:
+      - name: "Qiita トレンド"
+        url: "https://qiita.com/feed"
+      - name: "Qiita - AI"
+        url: "https://qiita.com/tags/ai/feed"
+      - name: "Qiita - LLM"
+        url: "https://qiita.com/tags/llm/feed"
+      - name: "Qiita - Python"
+        url: "https://qiita.com/tags/python/feed"
+      - name: "Qiita - 個人開発"
+        url: "https://qiita.com/tags/%E5%80%8B%E4%BA%BA%E9%96%8B%E7%99%BA/feed"
+
+  ZENN_TRENDING:
+    description: "Zenn トレンド・トピック別記事（RSS）"
+    feeds:
+      - name: "Zenn トレンド"
+        url: "https://zenn.dev/feed"
+      - name: "Zenn - AI"
+        url: "https://zenn.dev/topics/ai/feed"
+      - name: "Zenn - LLM"
+        url: "https://zenn.dev/topics/llm/feed"
+      - name: "Zenn - Python"
+        url: "https://zenn.dev/topics/python/feed"
+      - name: "Zenn - ChatGPT"
+        url: "https://zenn.dev/topics/chatgpt/feed"
+
+  # 以下は無効化（参照不要）
   AI_RESEARCH:
     description: "AI/ML 最新研究・論文・研究機関ブログ"
     feeds:

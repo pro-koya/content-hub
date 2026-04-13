@@ -14,7 +14,6 @@ from src.digest.renderer import DigestArticle, render_digest, save_digest
 from src.digest.summarizer import summarize
 
 SPECIAL_COLLECTORS = {
-    "QIITA_TRENDING",
     "NOTE_TRENDING",
     "X_BUZZ",
 }

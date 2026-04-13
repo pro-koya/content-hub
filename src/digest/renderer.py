@@ -25,6 +25,8 @@ class DigestArticle:
 
 
 CATEGORY_LABELS = {
+    "QIITA_TRENDING": "Qiita Trending",
+    "ZENN_TRENDING": "Zenn Trending",
     "AI_RESEARCH": "AI Research",
     "AI_PRODUCT_SAAS": "AI Product / SaaS",
     "MACRO_STRUCTURE": "Macro & Structure",
@@ -32,11 +34,8 @@ CATEGORY_LABELS = {
     "AGRICULTURE": "Agriculture",
     "AI_DRIVEN_DEV": "AI Driven Development",
     "CAREER_HYBRID": "Career / Hybrid",
-    "QIITA_TRENDING": "Qiita Trending",
     "NOTE_TRENDING": "note Trending",
     "X_BUZZ": "X Buzz",
-    "AI_DRIVEN_DEV": "AI Driven Development",
-    "CAREER_HYBRID": "Career / Hybrid",
 }
 
 

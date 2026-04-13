@@ -1,6 +1,9 @@
 name: Daily Digest
 
 on:
+  schedule:
+    # 毎朝 06:30 JST = 21:30 UTC (前日)
+    - cron: "30 21 * * *"
   workflow_dispatch:
 
 permissions:
@@ -13,10 +16,6 @@ jobs:
     runs-on: ubuntu-latest
     env:
       TZ: Asia/Tokyo
-      SUMMARIZER: ${{ secrets.SUMMARIZER || 'extractive' }}
-      LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
-      LLM_API_URL: ${{ secrets.LLM_API_URL }}
-      LLM_MODEL: ${{ secrets.LLM_MODEL }}
 
     steps:
       - uses: actions/checkout@v4
