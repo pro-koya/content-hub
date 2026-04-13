@@ -12,10 +12,6 @@ on:
           - 'false'
           - 'true'
 
-  schedule:
-    # JST 06:00 生成 = UTC 21:00 (前日)
-    - cron: "0 21 * * *"
-
 permissions:
   contents: write
 
