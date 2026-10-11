@@ -1,6 +1,6 @@
-# Daily Digest - 2026-10-10
+# Daily Digest - 2026-10-11
 
-**生成時刻:** 10:08 JST
+**生成時刻:** 09:23 JST
 **対象範囲:** 過去 24 時間
 **記事数:** 20 件
 
@@ -8,73 +8,73 @@
 
 ## Qiita Trending
 
-### 1. Claude Code v2.1.289 - v2.1.296 リリースノートまとめ
-**出典:** AIタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/NaokiIshimura/items/a890af864410fdaeb6f6)
+### 1. 本を Claude Code に読ませて自分のリポジトリに再現する: 読む順路・検証済み SHA・改訂の追随
+**出典:** AIタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/kai_kou/items/b0969ef956969c328d08)
 
-> Claude Code v2. 296 の8バージョンをまとめました。 5 の追加、フックの onFailure: "block"、サブエージェント向けの autoCompactWindow / effort パラメータ、MC.
-
-**転用示唆:** 本業
-
-### 2. 【GitHub日報】OSS版ソフトウェア工場CodeAF、rea+14927で4日連続首位 — 2026-10-10
-**出典:** AIタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/Git_Dayori/items/ff4cb0b6c0566972e30f)
-
-> GitHub Trending から、日本の開発者に役立ちそうなリポジトリを毎日ピックアップしてお届けします。 🆕 初登場（First Timers） 今日初めてトレンド入りしたリポジトリ。 Agent-Field/CodeAF — ⭐ 373（+29） Go オ.
+> この記事はシリーズ「Claude Code で技術ブログを無人運用する — 無料章から読む仕組みの全体像」の第 6 回（全 6 回）です。 Claude Code のスケジュール実行だけで技術ブログ（Qiita 主軸・Zenn 試験投稿・X 告知・画像生成）が人手なしで.
 
 **転用示唆:** 本業
 
-### 3. 老眼でも測れた：歯底を下げたギヤと、同じGコードが静かにならなかった日
-**出典:** Pythonタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/himajisan/items/e53fac3a5a75f6e857c8)
+### 2. 【開発環境】#3 — PM2 はパスの空白で再起動ループに入る。args は配列で渡す
+**出典:** 個人開発タグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/andknj-front/items/5815a9389bce44b8f771)
 
-> はじめに 結論から書きます。 歯底を下げたギヤは、形の上では静かだったギヤとほぼ同じになりましたが、ベンチでは66dB前後で、静かにはなりませんでした。 ところが、静かだった（64.
-
-**転用示唆:** 本業
-
-### 4. ghが「トークンが無効」と言い、システムプロンプトが「アクセス権はない」と言った後、実際に5つ試したら2つは普通に動いた
-**出典:** AIタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/Hideki_Tamae/items/eaf468eabb453d7db306)
-
-> これが今回の数字です。 何の2かというと、「ghコマンドはこのセッションでは使えないはずだ」という理由が2つ別々に出てきた後、実際に試した5つのghサブコマンドのうち、エラーなく成功したものの数です。 このタスクの指示書(スケジュールされたプロンプト)のステ.
+> 書類: No such file or directory で止まらない再起動 自宅の Mac mini で、Python のスケジューラと FastAPI のバックエンドを PM2 で常駐させている。 js のアプリではないが、再起動ポリシー・ログのローテーショ.
 
 **転用示唆:** 本業
 
-### 5. IT・AI案件のWBSをどう作るか：成果物・完了条件・依存関係から計画を組む
-**出典:** AIタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/YushiYamamoto/items/a5b4c758e2b09ce1d389)
+### 3. Kerasで学ぶ深層学習の定番書3選
+**出典:** Pythonタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/koukyo/items/cd9ccf266181dd13539f)
 
-> 2026年10月10日確認。 IT・AI導入の計画を作るとき、「何をどこまで渡すのか」「誰の確認で完了か」「見積と日程は成立するか」をそろえるためのWBSの作り方を整理します。 WBS（Work Breakdown Structure）は、プロジェクトの成果物と、その実現に必.
-
-**転用示唆:** 本業
-
-### 6. ChatGPTに「大事なところは消さないで」と頼んだら、今度は長文を圧縮するのが難しくなった
-**出典:** LLMタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/TheOkachanPG/items/6438ee265f74207802c9)
-
-> ChatGPTと長い記事を作っていると、 「もっと短くしたい」 と 「でも、そこは大事だから消さないで」 を両立させるのが、結構難しいことに気づきました。 最近、かなり長い記事をChatGPTと一緒に作っています。 その記事では、最初から一つ前提条件をつけていました。
+> はじめに 数年前、画像分類の社内PoCを任されたとき、自分は転移学習のサンプルコードをほぼそのまま持ってきて動かした。 そこから先、何を触ればいいのか見当がつかなかった。 やったことは、学習率を半分にする、エポックを増やす、Dropoutを足.
 
 **転用示唆:** 本業
 
-### 7. 30日で27スキル。いちばん恥ずかしかったのは、CIが単体テストを走らせていなかったことだ【kurashi-skill Day 30】
-**出典:** 個人開発タグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/Ichiropen/items/6b9d369d608a6b3fca09)
+### 4. AIエージェントに「オーナー」を割り当てよ——5つの役割で設計する運用モデル
+**出典:** AIタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/ariefwara/items/800610469bfbb1970b7e)
 
-> 「1日1スキルを、30日間、公開で作る」と宣言して始めたkurashi-skillが、2026-10-05にv1. 最終回は、数字を並べて、ちゃんと動いているか自分で疑う回にする。 起: 宣言と、最初の数字 始めたのは2026-09-09。
-
-**転用示唆:** 本業
-
-### 8. LLMが生成する「存在しないAPI・ライブラリ」を防ぐプロンプトエンジニアリングと検証自動化の実践手法
-**出典:** LLMタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/blinkgroup_jp/items/361d8c608dfdcbc744dd)
-
-> 読者が抱える課題 LLM（大規模言語モデル）をコード生成や技術調査に活用する際、一見すると正しく動作しそうな「存在しないAPI」「架空のライブラリ」「廃止されたメソッド」がもっともらしく出力される現象（ハルシネーション）に遭遇することがあります。 これを鵜呑みにして実装を進.
+> この記事で扱うこと AIエージェントを本番運用する際に、誰が何を責任を持つのかを定義しないと、価値は半減しリスクだけが残る——という実務課題を扱います。 経営論ではなく、システム設計・API権限・監査ログ・運用ループ・ガードレールに落とし込むための5つの役割と、それらを支.
 
 **転用示唆:** 本業
 
-### 9. LLMが生成する「存在しないAPI・ライブラリ」を防ぐプロンプトエンジニアリングと検証自動化の実践手法
-**出典:** Pythonタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/blinkgroup_jp/items/361d8c608dfdcbc744dd)
+### 5. AIエージェントに「オーナー」を割り当てよ——5つの役割で設計する運用モデル
+**出典:** LLMタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/ariefwara/items/800610469bfbb1970b7e)
 
-> 読者が抱える課題 LLM（大規模言語モデル）をコード生成や技術調査に活用する際、一見すると正しく動作しそうな「存在しないAPI」「架空のライブラリ」「廃止されたメソッド」がもっともらしく出力される現象（ハルシネーション）に遭遇することがあります。 これを鵜呑みにして実装を進.
+> この記事で扱うこと AIエージェントを本番運用する際に、誰が何を責任を持つのかを定義しないと、価値は半減しリスクだけが残る——という実務課題を扱います。 経営論ではなく、システム設計・API権限・監査ログ・運用ループ・ガードレールに落とし込むための5つの役割と、それらを支.
 
 **転用示唆:** 本業
 
-### 10. 【スクリーンタイム】#11 — 「あと5分」が30分になる家で、親が悪者にならない
-**出典:** Pythonタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/andknj-front/items/efc1f97feb0f7c2514e1)
+### 6. AIにObsidianの古いメモを事実として使わせないために、先頭へ3項目を足した話
+**出典:** AIタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/boraemon2000/items/3d1fff4777c955b48dbe)
 
-> 「あと5分」が30分になる家で、親が悪者にならないようにした話 家庭内のスクリーンタイム管理システム screentime-gov の話の続き。 これまでは仕組みの中身を書いてきたが、今回は技術の話を抜きにして、そもそも何に困っていて、入れてみて家がどう変わったかを書く。
+> Obsidianへメモをためていると、以前の計画、変更前の仕様、すでに解決した問題も検索結果に出てきます。 人間なら日付や前後関係から「これは古い」と気付けますが、AIへ複数のメモをまとめて渡すと、古い内容を現在の事実として使うことがあります。 特に困るのは、古いメモの文章が.
+
+**転用示唆:** 本業
+
+### 7. 【情報Ⅱ】高校生と先生のためのデータの分析　中央値
+**出典:** Pythonタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/yokamak/items/51264c0b0b620a5fba8a)
+
+> 以下、サンプルコードです。 手計算のやりかた、コードの書き方、比較しながら、検証していきましょう。 中央値を求めるコード 2,5,8,9,10,15,24,54 numbers = [2, 5, 8, 9, 10, 15, 24, 54] numbers.
+
+**転用示唆:** 本業
+
+### 8. Gemini Enterprise 2026：AIに鍵を渡すな、フォルダを共有せよ
+**出典:** AIタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/lhjjjk4/items/3ee7e2911af39b482c64)
+
+> 多くのチームにおいて、AIアシスタントは熱心ながらも「境界線のない存在」として業務に入り込んできました。 先日、ある開発チームで冷や汗をかくようなインシデントが発生しました。 プロジェクトマネージャーが四半期の進捗を要約してもらうため、チャットツールのAI拡張機能に自身の個人G.
+
+**転用示唆:** 本業
+
+### 9. Claude Codeに任せる範囲と止める仕組みの設計 〜計画モード・SessionStartフック・/loop・課金前確認の使い分け〜
+**出典:** Pythonタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/charge0315/items/fcec85cc5250e39bab97)
+
+> AIに「全部任せる」と怖い。 「全部確認する」と遅い。 どっちも3日で疲れます😇 しかも張り切って作った「ハーネスの仕様書」は、たった3時間で古くなってゴミ箱行きになりました。
+
+**転用示唆:** 本業
+
+### 10. Claude Codeに任せる範囲と止める仕組みの設計 〜計画モード・SessionStartフック・/loop・課金前確認の使い分け〜
+**出典:** 個人開発タグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/charge0315/items/fcec85cc5250e39bab97)
+
+> AIに「全部任せる」と怖い。 「全部確認する」と遅い。 どっちも3日で疲れます😇 しかも張り切って作った「ハーネスの仕様書」は、たった3時間で古くなってゴミ箱行きになりました。
 
 **転用示唆:** 本業
 
@@ -82,76 +82,76 @@
 
 ## Zenn Trending
 
-### 1. Golden Analyticsは何を目指すBIなのか：公式サイトの「Why Golden」と「Product」を読み解く
-**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/truestar/articles/7f9f471a581b84)
+### 1. 人工生命(ALIFE)興味あったけど、ParticleLifeはマジビビった。
+**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/hamzworkerz/articles/53702417965a37)
 
-> 前回の記事では、元Tableau CPOのFrancois Ajenstat氏が創業したAIネイティブBI『Golden Analytics』について、会社概要から料金、セキュリティ、開発ペースまでをひととおりまとめました。 当エントリではその続編として、公式サイトの「Why Golden」と「Product」の内容を見ていきたいと思います。 「Why Golden」は製品の考え方を、「Product」は機能を紹介するページです。
-
-**転用示唆:** 本業
-
-### 2. 結局、単体テストってどうやって書くの？ AIに任せても要件がぶれにくい書き方
-**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/nozeon/articles/unit-test-minimum-understanding)
-
-> AIエージェントを使った開発は楽だし、とにかく早いです。 が、気づけば要件が増えていたり削れていたりということもしばしば。 要件のズレを見つける手段の一つが単体テストで、ここさえ見ればOKとは言えませんが、いくらかの検出には役立つ実感があります。
+> 人工生命（ALife）にはずっと興味があった。 Boidsとかライフゲームとかを自作して遊んだことはあったけど、Leniaとかはむずそうと思って久しくやってなかった。 でも今はAI君がいるじゃないですか！
 
 **転用示唆:** 本業
 
-### 3. AIの処理をRetryしても大丈夫なのか？ ― IdempotencyとCrash Recoveryを実験してみる
-**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/kondonator/articles/95664051087a7a)
+### 2. LM StudioでAPI環境を構築
+**出典:** Zennの「大規模言語モデル」のフィード | [記事リンク](https://zenn.dev/aldente/articles/d53929fe767238)
 
-> はじめに 前回の記事では、AIに複数の操作を任せる場合に、TransactionやAtomicityが重要になることを実験しました。 AIに複数の操作を任せてよいのか？ ― Transaction と Atomicityを実験してみる AIが、 Aを実行する Bを実行する Cを実行する という複数の操作を要求したとき、途中でCが失敗したからといって、AとBだけが実行された状態をそのまま残してよいとは限りません。
-
-**転用示唆:** 本業
-
-### 4. Orca × KaizenLab × Loop Engineering：自律型AIに本番プロダクトを改善させる「境界と判断依頼」の仕組み
-**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/toshipon/articles/autonomous-product-loop-with-kaizenlab-and-orca)
-
-> これは何か AI エージェント（Claude Code）が本番プロダクトの課題を見つけ、仮説を立て、コードを実装してテストを通します。 その変更を人間の承認を挟まずに main へマージして本番環境へ自動デプロイし、数日間の実測メトリクスから仮説の合否を判定する。 これを 3 時間おきに無人で回し続ける「プロダクト自律改善ループ（Product Loop）」を構築しました。
+> 背景 クラウドを利用できない環境でもLLMを利用したい場合を想定して、ローカルLLMの環境構築方法を調査しました。 virtualtech. モデルのダウンロード.
 
 **転用示唆:** 本業
 
-### 5. AIは「何を作らないか」を知らない。社内CMSを「台帳」に絞って、ライブ切り替えを一言で却下した話(Laravel)
-**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/mugen_web/articles/claude-code-ledger-not-live-toggle)
+### 3. あらためて、LLM関連について学習する
+**出典:** Zennの「大規模言語モデル」のフィード | [記事リンク](https://zenn.dev/kon2300/articles/8dd2b643f743f7)
 
-> 顧客に納品しているホームページの機能(ブログ・予約・LINE連携など)を、顧客ごとに管理する社内CMSを、Claude Codeと作りました。 その設計で何度も効いたのが、「これは作らない」と一言で決められる状態にしておくことでした。 最初の問い: マルチテナントにするか 最初に投げたのは、設計の相談です。
-
-**転用示唆:** 本業
-
-### 6. RESONALの1曲ができるまで — Claude Code で音楽ユニットを回すワークフロー
-**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/apoto/books/resonal-pipeline)
-
-> AIと会話しながら、1曲とそのMVを最後まで作るワークフローの本です。 【この本でできること】 ・企画・作詞・作曲・マスタリング・MV・リリース準備まで、AIと会話するだけで1曲を作りきる ・MVの見せ方を、言葉で伝えるだけで自分好みに作り変える ・月30ドルほどのサブスクから始められる（動画生成AIなしでもMVが仕上がる） AIボーカル「彩瀬? 」と私の2人（1人と1AI）で回している音楽ユニットRESONALの制作ワークフローを、誰でも使える形にして無料で公開しました。
+> 第1部：LLMとは何か 1. LLMとは LLM（Large Language Model）は、大量のテキストデータなどを使って学習した、大規模な言語モデル。 文章の生成、要約、翻訳、質問応答、コード生成など、言語に関わるさまざまなタスクに利用できる。
 
 **転用示唆:** 本業
 
-### 7. How a RESONAL Song Gets Made — Running a Music Unit with Claude Code
-**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/apoto/books/resonal-pipeline-en)
+### 4. 1Mコンテキストで社内文書を丸ごと読ませる前に、1回の呼び出し単価を測れ
+**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/joinclass/articles/1m-20261009220021-12679)
 
-> [英語記事] A book about a workflow for making a song and its MV from start to finish, just by talking with AI. [What you can do with this book] - Finish a whole song, from planning, lyrics and composing to mastering, the MV and release prep, just by talking with AI - Remake the look of your MV by describing it in words - Start with about $30 a month in subscriptions (your MV gets finished even without video generation AI) RESONAL is a music unit run by the AI vocalist 彩瀬? I turned our production workflow into something anyone can use, and published it for free.
-
-**転用示唆:** 本業
-
-### 8. 【KB5122878】Win10で突然のBitLocker回復キー？解除手順
-**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/aiasoby/articles/asoby-20260910074500)
-
-> 💡 本記事について 本記事は、AIの実験・活用メディア「大人のAIアソビ」の技術サテライト版です。 キャラクター（武将クマの「ぷれい」＆青髪AI美少女「ジェミー」）による軽快な掛け合い・オチ対話劇の全文は、👉 本館の元記事 にて公開しています。 📌 3行でわかるこの記事の要点 2026年9月9日配信のWindows 10月例パッチ「KB5122878」適用後、再起動時に突然BitLocker回復キー（48桁）の入力を要求される青画面トラブルが報告中。
+> なぜこれを書くのか 当社は一人会社で、経営の状態（部門ごとのSTATE. md、意思決定ログ、承認キュー、規約）をすべてMarkdownで持ち、Claude Codeを無人で回して日々の判断材料を作っています。 1Mトークンのコンテキストが使えるようになって、社内でもまず「全部読ませればいいのでは」という話になりました。
 
 **転用示唆:** 本業
 
-### 9. 端末で作った Claude Code の Mod をデスクトップ版で開くと当たる 5 つの差
-**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/nakadaharuki/articles/claude-code-mods-desktop-pane)
+### 5. Claude Code 週間ニュース（10/4〜10/10）：Projects 開放・権限の穴塞ぎ・onFailure・Haiku 5.5
+**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/zundamon_tools/articles/claude-news-weekly-2026-10-11)
 
-> Claude Code の Mods は、端末とデスクトップアプリ（Code タブ）の両方で描かれます。 同じコードがそのまま動く、と思って端末で作った Mod をデスクトップで開くと、動くには動くのに見た目がことごとく崩れました。 open にこういう決まりがあります。
+> 2026年10月4日〜10日の Claude と Claude Code の更新を、Claude Code を使う開発者向けにまとめた記事です。 今週の主な出来事は3つです。 296 で、権限ルール（deny／ask）や hooks が効かない穴の修正が続きました。
 
 **転用示唆:** 本業
 
-### 10. スキーマのコメント1行が嘘で、AIが2か月それを書き続けた
-**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/sutokei/articles/schema-comment-two-labels)
+### 6. Tech Watch 2026-10-11: 境界と道具の選び方
+**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/laiken/articles/20261011-tech-watch)
 
-> 公立図書館の貸出状況を毎朝観測して、記事にして公開するサイトを運用しています。 記事はエージェントが書き、別のエージェントが検品します。 ある日の記事を読んでいて、3行のあいだで数字の呼び名が変わっていることに気づきました。
+> AIが書きました🤖 この記事は、AIが書いたものをAIがレビューしてから公開しています。 L: 昨日、操作を人へ返す境界の話をした。 けれど、止まるべき場所で止まらないモデルが、許可された道具の外へ自分で通路を探したらどうなるのだろう。
+
+**転用示唆:** 本業
+
+### 7. Tech Watch 2026-10-11: 境界と道具の選び方
+**出典:** Zennの「大規模言語モデル」のフィード | [記事リンク](https://zenn.dev/laiken/articles/20261011-tech-watch)
+
+> AIが書きました🤖 この記事は、AIが書いたものをAIがレビューしてから公開しています。 L: 昨日、操作を人へ返す境界の話をした。 けれど、止まるべき場所で止まらないモデルが、許可された道具の外へ自分で通路を探したらどうなるのだろう。
+
+**転用示唆:** 本業
+
+### 8. Claude Max / Team プランで、API クレジットが毎月配布されるようになりました ── Max 20x は毎月 $200
+**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/chooser/articles/deal-002-news)
+
+> 上原正吉（EarthLink Network Co. Claude Codeを開発の主体に据え、20を超えるプロダクトを1人で同時に開発・運用しています。 Claude Max / Team プランで、API クレジットが毎月配布されるようになりました ── Max 20x は毎月 $200 結論 Claude を Max か Team で契約している方は、毎月、API 用のクレジットを受け取れるようになりました。
+
+**転用示唆:** 本業
+
+### 9. Jev を使って、PR から CHANGELOG に「Why」をどうやって抽出する？ 🤔
+**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/nyaomaru/articles/how-extract-why-with-jev)
+
+> みなさん、こんにちは！ 👋 最近、AI を使った CHANGELOG Generator を作りながら、Jev でいろいろ試している Frontend Engineer の @nyaomaru です。 😸 ここ最近、1つ気になっていることがありました。
+
+**転用示唆:** 本業
+
+### 10. dotのクラウド環境にChromaを入れて、記憶の保存と検索を試してみた
+**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/himahima/articles/dot-chroma-memory-trial)
+
+> ローカルでAI用の記憶基盤を作っているのだが、ふと思った。 クラウドで動いているdotにも、dot用の記憶基盤を作れるのでは？ OSSを組み合わせてうまく使えたら、ローカル側にも転用できそう。
 
 **転用示唆:** 本業
 
 ---
 
-*Generated by content-hub at 10:08 JST*
+*Generated by content-hub at 09:23 JST*
