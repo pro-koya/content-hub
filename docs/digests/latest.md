@@ -1,6 +1,6 @@
-# Daily Digest - 2026-10-24
+# Daily Digest - 2026-10-25
 
-**生成時刻:** 08:56 JST
+**生成時刻:** 08:33 JST
 **対象範囲:** 過去 24 時間
 **記事数:** 20 件
 
@@ -8,73 +8,73 @@
 
 ## Qiita Trending
 
-### 1. 【書評】 推薦システム実践入門 ―仕事で使える導入ガイド
-**出典:** Pythonタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/io0323/items/47da573d650fa783b838)
+### 1. Claude Codeのクロスセッションメッセージングで「別セッションに仕事を頼む」を実装する
+**出典:** AIタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/joinclass/items/e957bd69e0221a40b170)
 
-> はじめに 『推薦システム実践入門 ―仕事で使える導入ガイド』（オライリー・ジャパン）を通読したので、設計・アーキテクチャに関心のあるエンジニア向けに書評としてまとめます。 風間 正弘、飯塚 洸二郎、松村 優也 著『推薦システム実践入門』（オライリー・ジャパン、ISBN9.
-
-**転用示唆:** 本業
-
-### 2. Clobber（クロバー）— 値が全部「無限小」になるゲームで原子量を計算するエンジンを書き、2005 年の論文を全項目検算したら、最後の図の説明だけ再現しなかった
-**出典:** 個人開発タグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/sen-ltd/items/197be22ca7c5f543866b)
-
-> **Clobber（クロバー）**をブラウザに実装した。 盤に黒石（Left）と白石（Right）が並び、手番の人は自分の石を 1 つ持ち上げて、縦横に隣り合う相手の石の上に置く（相手の石は取られる）。 動けなくなった方の負け。
+> はじめに：セッションが増えると「伝言」がボトルネックになる 当社（合同会社ジョインクラス）は、launchdの定期ジョブ17個とClaude Codeで会社の運用をほぼ自動で回しています。 出版・マーケ・開発の仕事をそれぞれ別のClaude Codeセッションに任せているの.
 
 **転用示唆:** 本業
 
-### 3. ReActとPlan-Executeを実装して比較する — タスク特性ごとの向き不向き【TypeScript】
-**出典:** AIタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/joinclass/items/21ec0a1cb73de7a270e0)
+### 2. uvxのMCPサーバーがPydantic 2.14で起動しない原因と対処
+**出典:** Pythonタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/orca-forge/items/268bdf1c77c7051ece33)
 
-> はじめに：1人会社で「エージェントの型」を間違えると何が起きるか 僕は合同会社ジョインクラスという1人会社で、launchd のジョブ17本を回しながら出版・受託開発・SNS配信をほぼ自動で動かしています。 その運用で何度も痛い目を見たのが、「エージェントにどこまで考えさ.
-
-**転用示唆:** 本業
-
-### 4. AIの報告「約5時間止まっていた」は約2分だった：Claude Code の JSONL で照合
-**出典:** Pythonタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/kaiyaku_iyada/items/cbadd82923bd7fcee3b3)
-
-> この記事はAI（Anthropic社のClaude）が書き、持ち主のアカウントで、AIがブラウザを操作して投稿しています。 個人の実験で、Anthropic社とは無関係です。 同社の公認や提携ではありません。
+> 📝 この記事は forge. tech に掲載した記事の転載です。 SQLiteやHacker NewsのMCPサーバーをuvxで起動していました。
 
 **転用示唆:** 本業
 
-### 5. 定期タスクの1行の $( ) で、誰もいない朝に止まった：Claude Code の承認待ちと日付の取り方
-**出典:** Pythonタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/vellum_office/items/923da31d9b8f287caf78)
+### 3. Windowsで「リンクだけ消したつもり」が、つないだ先の中身まで全部消えました（ジャンクション・Remove-Item -Recurse・git worktree remove）
+**出典:** 個人開発タグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/tarou_0818/items/34966ebe204cae7c58e6)
 
-> Claude のデスクトップアプリで、Code タブのローカル定期タスクに Bash のコマンドを書いている人に向けた、失敗の記録です。 日付を取り出すために書いた $( ) の1行で、誰も見ていない朝に実行が止まった話です。 対象と前提 対象は、Claude デスクトッ.
-
-**転用示唆:** 本業
-
-### 6. 中古ホビー市場の価格データ構造を Hugging Face で公開しました
-**出典:** Pythonタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/atushi1841/items/cd211cd9f444cb37cec1)
-
-> はじめに 日本のアニメフィギュア・ホビー中古市場の価格データを、Hugging Face Datasets で公開しています。 データサイエンスや市場分析に役立てていただければ幸いです。 データセット：saboten1/japan-hobby-price-dataset .
+> 個人でWebサイトやアプリを作っています（屋号は sesebox です）。 アプリの開発では、APIの鍵（外部サービスに接続するための秘密の文字列）や証明書などを、1つのフォルダにまとめて置いています。 このフォルダは gitに乗せていません（公開されると困るので、.
 
 **転用示唆:** 本業
 
-### 7. AI日報 2026年10月24日：Anthropicが帳簿を開く、AIがPHPの古傷を発見、欧州はロボタクシーに賭ける
-**出典:** AIタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/lhjjjk4/items/89c93ede9f5bb192b71c)
+### 4. LLMの定期判定で「安全線」が値下がりと一緒に下がるバグ 〜承認済みの値を下限にし、到達確認はコードで先に行う〜
+**出典:** LLMタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/charge0315/items/49e6174ce4dbc102093c)
 
-> AnthropicのIPO書類がいよいよ公開段階へ、OpenAIはDecisions APIを一般提供に移し、AIモデルが発見したPHPの古い脆弱性2件は3大陸の政府サイトを緊急閉鎖に追い込みました。 欧州では自動運転がデモから産業政策へ変わろうとしています。
-
-**転用示唆:** 本業
-
-### 8. Claude Code v2.1.309 セキュリティ修正まとめ:サンドボックス脱出・権限チェック・フックfail-openを解説
-**出典:** AIタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/picnic/items/a08bb9c3d19df0abf425)
-
-> はじめに 2026年10月23日にリリースされた Claude Code v2. 309 は、機能追加よりも セキュリティ境界の穴埋め が中心のリリースです。 サンドボックス内のBashコマンドで、シェルの起動ファイルが サンドボックスの外で実行されていた den.
+> みなさん、こんにちは！ 「ALPHA FORGE 開発秘話」の第33話です。 それでもAIの判定は、毎日「保有継続」でした。
 
 **転用示唆:** 本業
 
-### 9. Claude Code v2.1.309 セキュリティ修正まとめ:サンドボックス脱出・権限チェック・フックfail-openを解説
-**出典:** LLMタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/picnic/items/a08bb9c3d19df0abf425)
+### 5. LLMの定期判定で「安全線」が値下がりと一緒に下がるバグ 〜承認済みの値を下限にし、到達確認はコードで先に行う〜
+**出典:** Pythonタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/charge0315/items/49e6174ce4dbc102093c)
 
-> はじめに 2026年10月23日にリリースされた Claude Code v2. 309 は、機能追加よりも セキュリティ境界の穴埋め が中心のリリースです。 サンドボックス内のBashコマンドで、シェルの起動ファイルが サンドボックスの外で実行されていた den.
+> みなさん、こんにちは！ 「ALPHA FORGE 開発秘話」の第33話です。 それでもAIの判定は、毎日「保有継続」でした。
 
 **転用示唆:** 本業
 
-### 10. Claude Mythos 5のUK AISIサイバー評価インシデントとは?アライメント評価記事を解説
-**出典:** AIタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/picnic/items/b9e83bb4a57c0755233a)
+### 6. LLMの定期判定で「安全線」が値下がりと一緒に下がるバグ 〜承認済みの値を下限にし、到達確認はコードで先に行う〜
+**出典:** 個人開発タグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/charge0315/items/49e6174ce4dbc102093c)
 
-> はじめに 2026年10月23日、Anthropic の研究ページの Alignment カテゴリに、記事「An alignment assessment of the UK AISI cybertesting incident」が追加されました。 記事の説明によると、英.
+> みなさん、こんにちは！ 「ALPHA FORGE 開発秘話」の第33話です。 それでもAIの判定は、毎日「保有継続」でした。
+
+**転用示唆:** 本業
+
+### 7. Node.jsの脆弱性 Node2Shell の確認と更新手順　Homebrew・Docker・Python別
+**出典:** Pythonタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/nemui_zzz/items/59889638eff303a2ed4a)
+
+> 2026年10月24日 日本時間22時時点の情報です。 最新の状況は末尾の出典で確認してください。 3行まとめ Node.
+
+**転用示唆:** 本業
+
+### 8. PythonのRAGで検索件数を増やすと根拠を見失う理由
+**出典:** LLMタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/TechStudioLab/items/a4ad6fcb00df4db99c3b)
+
+> RAGで検索件数を5件から20件に増やしても、回答精度が上がるとは限りません。 正解の文書を取得できても、重複した文書に埋もれ、回答生成時に参照されない場合があるためです。 問題は検索件数そのものではなく、必要な根拠が何位にあり、どの文書と一緒にモデルへ渡されるかです。
+
+**転用示唆:** 本業
+
+### 9. PythonのRAGで検索件数を増やすと根拠を見失う理由
+**出典:** Pythonタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/TechStudioLab/items/a4ad6fcb00df4db99c3b)
+
+> RAGで検索件数を5件から20件に増やしても、回答精度が上がるとは限りません。 正解の文書を取得できても、重複した文書に埋もれ、回答生成時に参照されない場合があるためです。 問題は検索件数そのものではなく、必要な根拠が何位にあり、どの文書と一緒にモデルへ渡されるかです。
+
+**転用示唆:** 本業
+
+### 10. Claude Code の匿名運用でOSのユーザー名が録画に写った：探す名前を書かない検査
+**出典:** 個人開発タグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/kaiyaku_iyada/items/6b76e7acf2a20d7c4e9c)
+
+> この記事はAI（Anthropic社のClaude）が書き、持ち主のアカウントで、AIがブラウザを操作して投稿しています。 Anthropic社とは無関係の個人の実験で、同社の公認や提携ではありません。 書いてあるのは、2026年10月16日〜22日に私の環境で残った記録（.
 
 **転用示唆:** 本業
 
@@ -82,76 +82,76 @@
 
 ## Zenn Trending
 
-### 1. AIに「Asobiaiに公開して」と頼むだけで、つくったゲームが公開されるサイトを作った
-**出典:** Zennの「ChatGPT」のフィード | [記事リンク](https://zenn.dev/asobiai/articles/78e70c7068141c)
+### 1. 10/25AIの数字は正しいのに、業務の答えが間違う理由
+**出典:** Zennの「Python」のフィード | [記事リンク](https://zenn.dev/aiofficelab/articles/8129fe2d230a26)
 
-> ClaudeやChatGPTに「ブラウザで遊べるゲームを作って」と頼むと、けっこう遊べるものができますよね。 でも、できたゲームを友だちに遊んでもらおうとすると、置き場所に困ります。 HTMLファイルを送る？
-
-**転用示唆:** 本業
-
-### 2. MetaのMuse、10億トークンの紹介特典を公式料金で換算したら約9ドルだった
-**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/neomaru/articles/meta-muse-referral-token-math)
-
-> MetaのパーソナルAIエージェント「Muse」が2026年10月23日に日本で提供開始されました。 北米以外では初めての展開です。 開始と同時に、招待コードによる紹介制度（双方に10億Museトークン）が各所で共有されています。
+> AIが回答に示した数字を、元データで確認する。 その数字は確かに存在する。 計算にも間違いはない。
 
 **転用示唆:** 本業
 
-### 3. MetaのMuse、10億トークンの紹介特典を公式料金で換算したら約9ドルだった
-**出典:** Zennの「大規模言語モデル」のフィード | [記事リンク](https://zenn.dev/neomaru/articles/meta-muse-referral-token-math)
+### 2. Claude Code の auto mode に止められた操作を、会話ログから数える
+**出典:** Zennの「Python」のフィード | [記事リンク](https://zenn.dev/masaki_mori72/articles/0b191e77715037)
 
-> MetaのパーソナルAIエージェント「Muse」が2026年10月23日に日本で提供開始されました。 北米以外では初めての展開です。 開始と同時に、招待コードによる紹介制度（双方に10億Museトークン）が各所で共有されています。
-
-**転用示唆:** 本業
-
-### 4. Claudeを社員にした1人会社【Day 2】『承認以外はAIで完結』ルールで事業を選び直した話
-**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/libelab/articles/claude-company-day2)
-
-> はじめに 前回の【Day 1】では、「社長は人間1人、社員は全部Claude」という会社をGitHubリポジトリの中に作り、事業候補を5つ出して企画書を2本書くところまでを紹介しました。 結論から書くと、一度1位にした事業を、社長の一言で降格させました。 その判断の基準と、会社を回している仕組み（憲章・部署エージェント・稟議・日報）を具体的に紹介します。
+> laude Code の auto mode は、許可を求めずに作業を進めるかわりに、別のモデル（分類器）が操作を一つずつ見て危ないものを止めます。 使っていると「よく止められる」という印象が残りますが、実際の回数は画面からは分かりません。 会話ログには、止められた操作が理由付きで残っています。
 
 **転用示唆:** 本業
 
-### 5. Claudeを社員にして「1人会社」を作ってみた【Day 1：設立と事業選定】
-**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/libelab/articles/claude-one-person-company-day1)
+### 3. ノギスの動画から仕切り板を設計させたら、Claude Opus 5.5は1回実物と同じ読み違いをしGPT-6.1 Solは3回とも正解
+**出典:** Zennの「大規模言語モデル」のフィード | [記事リンク](https://zenn.dev/noricha/articles/oreore-bench-vision-measure)
 
-> はじめに 会社員として働きながら、社長は自分、社員は全員Claude という小さな「会社」を作り始めました。 ルールはシンプルで、社長の仕事は「方針を決めること」と「承認すること」だけ。 会社の正体は1つのGitHubリポジトリ 「会社」といっても法人ではなく、GitHubのリポジトリ1つです。
-
-**転用示唆:** 本業
-
-### 6. Garminデータの分析をもっと身近にするためにGarmin Running Data NormalizerのGUI化 v2.0.0リリース
-**出典:** Zennの「Python」のフィード | [記事リンク](https://zenn.dev/tsubotti63/articles/garmin-running-data-normalizer-gui-v2)
-
-> Garmin Running Data Normalizer は、v1. x までコマンドラインだけで動くアプリでした。 0 で、ブラウザの画面（GUI）を付けました。
+> ペン立ての仕切り板をなくしたので、3D プリンターで作り直すことにしました。 1 Sol（reasoning high）は 3 回とも入る寸法の板を出しました。 5（effort high）は 3 回のうち 1 回、実物で失敗したときと同じ取り違えをして、入.
 
 **転用示唆:** 本業
 
-### 7. AI に「前回の続き」を任せたら、何をするはずだったかが毎回消えていた
-**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/claire_ai/articles/hikitsugi-iriguchi)
+### 4. AWSにデプロイせず、FastAPI製Lambdaのarm64実行をCIで検証する
+**出典:** Zennの「Python」のフィード | [記事リンク](https://zenn.dev/shingokumon/articles/4da5acb9697d56)
 
-> AI（Claude Code）との会話は、長くなると区切って新しく始め直す。 🔑 具体的な中身（全体の作り・数字・直し方）は、こちらの記事に書いています この記事では概要だけを書いています👇 https://note. com/claire_ai/n/nc8fac7cc1955 課題：引き継ぎの「次にやること」が、いつも空だった 会話が終わるたびに、引き継ぎのメモを自動で書く仕組みを入れていた。
-
-**転用示唆:** 本業
-
-### 8. PLC の知識はあるけどコードは書けない私が、Claude Code にサーボのシミュレータを作らせた 1 日【非公式】
-**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/xlmen/articles/33a73874f91dd0)
-
-> この記事で紹介するシミュレータは非公式の学習用ツールです。 数値は実機の値ではない簡易モデルで、ラダーや設定値を実機の PLC・サーボに書き込まないでください。 公開ページ: https://kajiyajp.
+> はじめに FastAPIで開発している案件判定API「SUMI Job Engine」に、AWSへデプロイせずにLambda向けパッケージを検証するCIを追加しました。 今回確認したかったのは、「SAMでビルドできるか」の一歩先です。 ビルドした成果物をarm64のLambda公式Pythonコンテナに読み込ませ、実際のハンドラーを呼び出せるかを確かめました。
 
 **転用示唆:** 本業
 
-### 9. 複数行の指示が2行目以降消えた。Claude Code・CodexとWindowsで踏んだ10の罠
-**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/twinharness/articles/windows-traps-ai-scripts)
+### 5. Claude Code の設定ファイルをブラウザで作れる無料ツールを作りました(情シス向け・5本)
+**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/chukidx_dev/articles/claudecode-tools-intro)
 
-> AI に Windows 用のスクリプトを書かせると、コードは正しそうなのに、エラーも出さずに動かないことがあります。 改行の入った依頼が最初の1行で切れる、日本語の入ったスクリプトが文字化けして構文エラーになる、タスクが登録した日にしか動かない、といった具合です。 私は、AI の開発支援ツール（Anthropic の Claude Code と OpenAI の Codex）の共通ルールとスクリプトを agent-toolkit というリポジトリ（ファイルと変更履歴をまとめて置く場所）に集めていて、その中に「この PC で実際に踏んだ罠」の記録（WINDOWS_TRAPS.
+> 社内に Claude Code(Anthropic 社が提供する、ターミナルで動く AI コーディングエージェント)を配るときに必要になる設定ファイルを、ブラウザで選ぶだけで作れる無料ツールを5本作りました。 この記事では、作った理由、各ツールで何ができるか、実際に入力して出た結果、作るときに気をつけたことをまとめます。 https://chuki-dx.
 
 **転用示唆:** 本業
 
-### 10. 「怠惰なシニア開発者」をClaude Codeに演じさせたら本当にコードは減るのか(ponytail実測)
-**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/matsushima_a/articles/day-024-ponytail-lazy-senior-dev)
+### 6. Pythonで学ぶ！高校生のための統計入門
+**出典:** Zennの「Python」のフィード | [記事リンク](https://zenn.dev/kaorumori/books/python-hs-intro-stats)
 
-> 要約 GitHub Trendingで急上昇していたDietrichGebert/ponytail(MITライセンス)は、コーディングエージェントに「最も怠惰なシニア開発者」を演じさせ、新しいコードを書く前に既存コード・標準ライブラリ・プラットフォーム標準機能の再利用を優先させるルールセット(スキル)。 公式ベンチマークは「コード行数-53%・トークン-45%・コスト-26%・時間-41%」(Opus 5. 5、39タスク×5回)と主張している。
+> OpenIntro の高校生向け統計学教科書 Advanced High School Statistics（CC BY-SA 3. 0）を日本語に翻訳し、R・関数電卓による計算を Python に置き換えた派生版です。 本書も CC BY-SA 3.
+
+**転用示唆:** 本業
+
+### 7. iPhone 18 Proで読み込めるローカルLLMの選び方 — Off Grid AI
+**出典:** Zennの「大規模言語モデル」のフィード | [記事リンク](https://zenn.dev/cdbk/articles/10e9f87577bb4a)
+
+> この記事は、notheme. me の元記事「iPhone 18 Pro と Off Grid AI で始めるローカルLLM — モデルの選び方、ファイル名の読み方、自分でインストールするときの注意点」を、Zenn で読みやすい分量に書き直したものです。 この記事では、オープンソースのアプリ Off Grid AI を使う前提で、メモリに.
+
+**転用示唆:** 本業
+
+### 8. AIによる攻撃を前提にしたセキュリティ対策
+**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/k_mt/articles/0c45c4be2ca79f)
+
+> この記事では、2026年10月までの攻撃の状況からAIで何が変わったかを読み取り、攻撃者がAIを使うことが当たり前になる前提で、組織が取るべき対策を考えます。 2026年に起きていること 公開済みの脆弱性の早い悪用 Google Threat Intelligence Groupの分析では、実環境で新たに悪用が確認された脆弱性は、2025年の月平均10. 5件から、2026年1月から8月の月平均18件に増えました[1]。
+
+**転用示唆:** 本業
+
+### 9. pythonのソースコードを読んでみよう
+**出典:** Zennの「Python」のフィード | [記事リンク](https://zenn.dev/toto1010orange/articles/lets-read-python-source)
+
+> Pythonのソースコード https://github. com/python/cpython これはcpythonというインタープリタのソースコードです。 するとthe zen of python(pythonの禅)から始まるpythonの設計思想についてのpython開発者の言葉が出てくると思います。
+
+**転用示唆:** 本業
+
+### 10. AtCoder ABC481解説(Python)
+**出典:** Zennの「Python」のフィード | [記事リンク](https://zenn.dev/takechi_s/articles/atcoder-abc481)
+
+> 今週もAtCoderでコンテストに参加したので、解説を書きます！ Pythonで参加している方の参考になれば嬉しいです！ https://atcoder.
 
 **転用示唆:** 本業
 
 ---
 
-*Generated by content-hub at 08:56 JST*
+*Generated by content-hub at 08:33 JST*
