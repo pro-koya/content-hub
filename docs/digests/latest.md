@@ -1,6 +1,6 @@
-# Daily Digest - 2026-11-02
+# Daily Digest - 2026-11-03
 
-**生成時刻:** 09:58 JST
+**生成時刻:** 12:01 JST
 **対象範囲:** 過去 24 時間
 **記事数:** 20 件
 
@@ -8,73 +8,73 @@
 
 ## Qiita Trending
 
-### 1. Ryzen AI Max+ 395の内蔵GPUでYOLO26nが600 FPS超え！MIGraphXで動かすyolodemo
-**出典:** Pythonタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/kotetsu_yama/items/23570a9c7b82b82b1e4b)
+### 1. 無料のWebツールを月いくらで動かしているか（Cloudflare Workers・Vectorize・Google翻訳）(No.07)
+**出典:** 個人開発タグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/jumon_koubou/items/0505d606b90d71c92e59)
 
-> はじめに AMD Ryzen AI Max+ 395の内蔵GPU、Radeon 8060SでYOLO26nを動かし、物体検出デモ「yolodemo」のライブ測定で 平均606. 2 FPS を達成しました。 入力サイズは448×448、バッチサイズは1、演算精度はFP32です.
-
-**転用示唆:** 本業
-
-### 2. 4。CursorのマーケットプレイスでClaude Code拡張が改ざんされ最大5000人に届いた日、自分の環境で「使える」表示なのに接続が切れていたコネクタの数はその数字だった
-**出典:** AIタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/Hideki_Tamae/items/650feb3eb8391af59e86)
-
-> これが今回の数字です。 何の4かというと、自分(Claude)がこのセッションで実際にListConnectorsを呼んで確認した結果、「enabledInChat: true(このチャットで使える設定になっている)」なのに「connected: false.
+> 呪文工房（日本語からNovelAIのタグを作るWebツール）の連載記事です。 無料で公開しているWebツールに、毎月いくらかかっているのか気になりませんか？ この記事では、呪文工房の運営費の内訳と計算、費用を抑えるために選んだ設計を書きます。
 
 **転用示唆:** 本業
 
-### 3. UNIXタイムスタンプと日時をJavaScriptで相互変換する（秒とミリ秒・タイムゾーンの罠）
-**出典:** 個人開発タグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/yuapi/items/be8f31f2334a9f60dade)
+### 2. 9行直してgit差分3,649行、open()の改行指定を試した
+**出典:** Pythonタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/taka0429/items/2c9c38e808785380b4d4)
 
-> ログの時刻、APIのレスポンス、DBに入っていた数値——1700000000 のような数字を見て「これ、結局いつ？ 」となること、ありませんか。 逆に「今のUNIX時間がサッと欲しい」場面も地味に多いです。
-
-**転用示唆:** 本業
-
-### 4. Gemini Computer UseのGAを確認：操作案・実行・結果照合を分ける
-**出典:** Pythonタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/sin-aiagent/items/5d7ad6dfac49ee4fd72f)
-
-> 画面の入力や確認をAIへ任せたい。 でも「押したはず」と「反映された」は別です。 Googleは2026年10月30日、Gemini APIのComputer UseをInteractions APIとGenerateContent APIで正式提供（GA）にしました。
+> 何が起きたか 私の環境では、AIエージェントがタスク管理用の Markdown を Python で書き換えます。 その場で書く短いスクリプトは、open() に newline 引数を渡さないことが多くあります。 ある晩、9行しか変えていないタスク管理用のファイルの差分が.
 
 **転用示唆:** 本業
 
-### 5. FastAPI×RedisによるWebhook防御の実装
-**出典:** Pythonタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/TOAI/items/54196a2be0cd52a4dec0)
+### 3. 現在の軍事技術でAIの価値を解説
+**出典:** AIタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/good59548/items/34849c22eee8a5836216)
 
-> 外部Webhook受信時の署名偽装とリプレイ攻撃を封じる防衛機構：FastAPI × Redisによるエンタープライズ実装 はじめに モダンな分散システムやマイクロサービスアーキテクチャにおいて、決済プロバイダ（Stripe、PayPal等）やSaaSプラットフォーム.
-
-**転用示唆:** 本業
-
-### 6. STATE OF AI REPORT 2026 (Safety)
-**出典:** AIタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/matumu20/items/d3e4017855d76ac25e90)
-
-> State of AI Report 2026 深堀:Safety セクション 対象:スライド195〜235(約41枚) 読み方:重要度の高い順に並べ、各項目に根拠スライド番号(S. 注意:本セクションの事例は、各社の開示・報道・研究論文の記述をレ.
+> 現代の軍事技術において、人工知能（AI）は単なる「補助ツール」ではなく、戦場のパラダイムを根底から覆す「決定的な勝敗の分かれ道（ゲームチェンジャー）」としての価値を持っています。 情報の収集から意思決定、そして実際の交戦に至るまでのスピードと精度を極限まで高めるAIの核心的.
 
 **転用示唆:** 本業
 
-### 7. MCPにおけるTool・Resource・Promptの違いと実務での設計・使い分けガイド
-**出典:** AIタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/blinkgroup_jp/items/df7fc723e3db921411ab)
+### 4. React Native の致命エラーの「一言」を次の起動で送る：Apple の記録に RCTFatal しか残らないときの受け手の入れ方
+**出典:** 個人開発タグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/feedminus47/items/f5ec38faaffb67a7cc78)
 
-> Model Context Protocol（MCP）を導入する際、サーバー側で実装するコンポーネントである「Tool」「Resource」「Prompt」の役割分担に迷うケースがあります。 各要素の仕様上の役割を正しく理解し、適切に使い分けることで、LLMアプリケーションの.
-
-**転用示唆:** 本業
-
-### 8. MCPにおけるTool・Resource・Promptの違いと実務での設計・使い分けガイド
-**出典:** LLMタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/blinkgroup_jp/items/df7fc723e3db921411ab)
-
-> Model Context Protocol（MCP）を導入する際、サーバー側で実装するコンポーネントである「Tool」「Resource」「Prompt」の役割分担に迷うケースがあります。 各要素の仕様上の役割を正しく理解し、適切に使い分けることで、LLMアプリケーションの.
+> minulo は、インスタや YouTube を DM や登録チャンネルを残したまま開き、リールやショートだけを隠す iPhone アプリです（隠すのは無料、Pro は有料）。 この記事は minulo を1人で作っている北林が書いています。 今回は、アプリが JS の致命エラ.
 
 **転用示唆:** 本業
 
-### 9. MCPにおけるTool・Resource・Promptの違いと実務での設計・使い分けガイド
-**出典:** Pythonタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/blinkgroup_jp/items/df7fc723e3db921411ab)
+### 5. フロントエンド開発とUIデザインを加速する：AIを活用したレトロタイポグラフィの自動生成と実装
+**出典:** AIタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/Diiiii/items/b7bc8f170ed91bc07eff)
 
-> Model Context Protocol（MCP）を導入する際、サーバー側で実装するコンポーネントである「Tool」「Resource」「Prompt」の役割分担に迷うケースがあります。 各要素の仕様上の役割を正しく理解し、適切に使い分けることで、LLMアプリケーションの.
+> Web開発やUI/UXデザインの現場において、タイポグラフィの選定はプロジェクトのクオリティを左右する極めて重要な要素です。 特に、キャンペーンサイトや特定のブランディングが求められるプロジェクト（例：80年代のシンセウェーブ風、90年代のピクセルアート風、あるいはY2Kテイ.
 
 **転用示唆:** 本業
 
-### 10. 🏠 ローカル LLM だけで「LLM Wiki」をやってみた。書くのは 125B、読むのは 1.7B、見張るのは判定専用モデル
-**出典:** LLMタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/6in/items/0987a7ff1e026abb7227)
+### 6. DXFに出す前に確認する3つのこと
+**出典:** AIタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/archybase/items/3522c77d8d0deb71032b)
 
-> 2026 年 4 月に Andrej Karpathy さんが公開した「LLM Wiki」、覚えていますか？ 資料を毎回検索する代わりに、LLM が資料を読んで Markdown の Wiki を書き、育て続けてくれる、というアイデアです。
+> こんにちは、武田そらです。 普段は ArchyBase で生成系 AI と空間推理まわりのパイプラインを触っています。 今日は、チームで作っているもう一つのプロダクトの 無料の平面図メーカー を題材に、「きれいな平面図が出た」あとに DXF / SVG / PDF へ落とす前.
+
+**転用示唆:** 本業
+
+### 7. LLMのタイムアウト後も動くPythonスレッドを検証
+**出典:** AIタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/hironakamura_ai/items/70b5bd94b408dde9b882)
+
+> ターミナルにタイムアウトが返った。 今日、同期型LLMクライアントを別スレッドで呼ぶ構成で、裏に残る処理を数えた。 自分は待ち時間と実処理の同時実行数を別々に制限する。
+
+**転用示唆:** 本業
+
+### 8. LLMのタイムアウト後も動くPythonスレッドを検証
+**出典:** Pythonタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/hironakamura_ai/items/70b5bd94b408dde9b882)
+
+> ターミナルにタイムアウトが返った。 今日、同期型LLMクライアントを別スレッドで呼ぶ構成で、裏に残る処理を数えた。 自分は待ち時間と実処理の同時実行数を別々に制限する。
+
+**転用示唆:** 本業
+
+### 9. エージェントの仕事をどこまで信じるか：ワークフロー記憶、PRM、証明付きコード、自動化の皮肉など7本
+**出典:** LLMタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/redreamality/items/be7e8463df296296a870)
+
+> エージェントに仕事を任せる場面が増えるほど、「結果が合っているか」より「途中のどこを信じてよいか」が気になってきます。 この記事は、最近まとめたノートの中から、エージェントの振る舞いを検証したり、人間との分担を考え直したりするのに役立った 7 本を選んで紹介するものです。
+
+**転用示唆:** 本業
+
+### 10. AIエージェントが開発中のWebアプリをリアルタイムプレビューできるBedrock AgentCore Session endpointsを試してみた
+**出典:** LLMタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/R-You/items/e1bd29f10157c53b7a57)
+
+> この記事はAI（Codex）と一緒に作成しました。 内容は2026年11月時点の検証結果です。 はじめに 2026年10月30日、AWSから以下の記事が公開されました。
 
 **転用示唆:** 本業
 
@@ -82,76 +82,76 @@
 
 ## Zenn Trending
 
-### 1. PythonとAIでYouTubeの音声をMIDIに自動変換する方法【Google Colab・Basic Pitch】
-**出典:** Zennの「Python」のフィード | [記事リンク](https://zenn.dev/fibujrsl/articles/35547351d65d0e)
+### 1. Engram と Backbone の変更が回答品質に与える影響を交互作用から検証する
+**出典:** Zennの「大規模言語モデル」のフィード | [記事リンク](https://zenn.dev/id774/articles/58d5c55f86ba7c)
 
-> はじめに YouTubeで公開されている楽曲を聴いていて、その演奏をMIDIデータとして取り出せないかと考えたことがある。 MIDIデータがあれば、楽曲に含まれる音符をピアノロールで確認したり、DAWで編集したり、シンセサイザーの演奏データとして利用したりできる。 今回は、PythonとSpotifyが公開している音程推定AIのBasic Pitchを使い、YouTube動画の音声をMIDIファイルに変換するプログラムを作成する。
-
-**転用示唆:** 本業
-
-### 2. Kiro CLIとKiro Crewを改めて入門してAWSで動かすまで
-**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/upgradetech/articles/2026-11-kiro-crew-api-key-intro)
-
-> KiroはIDEだけの製品ではなくなりました。 2026年11月時点では、IDE、CLI、Web、Mobile、そしてCrewの5つの入口があります。 特にCLIはAPIキーでヘッドレス実行ができるようになり、Crewは自分のマシンに常駐して仕事を進めるエージェントとして公開されました。
+> Engram を高精度で残したときの品質差を何に帰属できるか Engram の参照テーブルを元の精度で保存しても、回答品質の改善を確認するには、同じ Backbone に異なる精度の Engram を組み合わせた比較が必要である。 Backbone も同時に変更された構成では、観測した得点差に二つの変更が混在する。 この関係を、入力 x、Engram の参照テーブル D、Backbone の重み W、推論条件 c を使っ.
 
 **転用示唆:** 本業
 
-### 3. 今日の市場ブリーフィング
-**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/bambampurin/articles/2026-09-22-market-daily)
+### 2. CPU使用量は低いのに応答が遅い。Gunicornの送信待ちを調べる
+**出典:** Zennの「Python」のフィード | [記事リンク](https://zenn.dev/kamuidash_tech/articles/d41dae8734b45d)
 
-> 日経平均65,000円突破とレーザーテック+8. 97%の上昇下におけるVIX指数と為替の動向 レーザーテック急騰にみる半導体関連株とその他主要銘柄の明暗 主要株価指数の動きを把握する方法 日経平均株価が65,000円の大台を突破した背景には、ハイテク株を中心とした市場の買い展開が存在します。 2026年9月22日の日経平均株価は前日比+1.
-
-**転用示唆:** 本業
-
-### 4. ダウンロードもロードもできるのに0問しか解けない。Ollama公式タグの量子化崖を自分のデータ再集計で確かめた
-**出典:** Zennの「大規模言語モデル」のフィード | [記事リンク](https://zenn.dev/matsushima_a/articles/day-033-quantized-llm-cliff)
-
-> 要約 arXiv:2609. 05881「Broken on Arrival」という論文が、Ollama公式ライブラリの305タグをHumanEval+で機能検査し、7タグ(qwen2. 8b-mini-instruct-q2_K、llama3.
+> この記事の主な対象は、Gunicornの同期ワーカーを2個使い、それぞれが1件ずつ応答を書き込む構成です。 フレームワークを使わずに書いた小さなPythonアプリで、受信の遅い要求があるとき、別の要求への応答がどう変わるかを測りました。 同期ワーカーは、担当する応答の書き込みが終わるまで次の要求を扱わないプログラムです。
 
 **転用示唆:** 本業
 
-### 5. CSVからUnity・MagicOnion・Rustのマスターデータを一括生成するパイプラインを作った
-**出典:** Zennの「Python」のフィード | [記事リンク](https://zenn.dev/chinpangx_tech/articles/7f7d16f310b0a3)
+### 3. AIの定期タスクを止めずに回す：使用量の上限・モデルの使い分け・時間の分散・見張り役
+**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/shoyomayabot/articles/keep-scheduled-ai-tasks-running)
 
-> はじめに ゲーム開発では、アイテムやショップなどのマスターデータをCSVやスプレッドシートで管理し、それをクライアント(Unity)とサーバーの両方で使う場面が多いです。 このとき、次のような作業が手作業になりがちです。 CSVを、クライアント用とサーバー用の形式にそれぞれ変換する 列を足すたびに、C#のクラスとRustのstructを両方直す クライアントとサーバーで型の幅や解釈が食い違う そこで、YAMLでスキーマを一度定義すれば、CSVから各配置先向けの成果物を一括生成するパイプラインを作りました。
-
-**転用示唆:** 本業
-
-### 6. ベクトル検索だけでは足りない ― ハイブリッド検索とCrossEncoder再ランキングの実装手順
-**出典:** Zennの「大規模言語モデル」のフィード | [記事リンク](https://zenn.dev/johnny1024/articles/3ecdf0573f5d73)
-
-> ベクトル検索は「意味の近さ」には強い一方、型番・固有名詞・エラーコードのような表記の完全一致が重要な情報を取り逃します。 逆にキーワード検索（BM25など）は言い換えに弱い。 実務では両方を組み合わせるハイブリッド検索が定石です。
+> AIエージェントには、決まった時間に仕事をさせる「スケジュールタスク」を設定できます。 毎朝のニュースまとめ、毎週のレポート、記事の投稿などです。 便利な反面、数が増えると困ったことが起きます。
 
 **転用示唆:** 本業
 
-### 7. ベクトル検索だけでは足りない ― ハイブリッド検索とCrossEncoder再ランキングの実装手順
-**出典:** Zennの「Python」のフィード | [記事リンク](https://zenn.dev/johnny1024/articles/3ecdf0573f5d73)
+### 4. 未払いを一行足したら、正しい集計がテストで落ちた
+**出典:** Zennの「Python」のフィード | [記事リンク](https://zenn.dev/mayumi_kondou/articles/0a2752c328c4c1)
 
-> ベクトル検索は「意味の近さ」には強い一方、型番・固有名詞・エラーコードのような表記の完全一致が重要な情報を取り逃します。 逆にキーワード検索（BM25など）は言い換えに弱い。 実務では両方を組み合わせるハイブリッド検索が定石です。
-
-**転用示唆:** 本業
-
-### 8. Agent DX 〜 AI時代にフレームワークHonoは必要か
-**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/yusukebe/articles/3d3dc6605ca1b1)
-
-> AIがユーザーになりました。 我々は人間向けの開発者ではなく、AI向けの開発者体験を考えなくてはいけません。 雰囲気で「フレームワークは必要ない」「フレームワークは必要」と言っても、AIの意見ではありません。
+> 月ごとの売上レポートに、「支払い済みの合計額」と「全取引に占める支払い済みの件数割合」を載せるとします。 CSVから、指定した月の二つの値を計算するPython関数を作ります。 動作を確かめるため、まず10月の支払い済み売上1200を一件だけ渡します。
 
 **転用示唆:** 本業
 
-### 9. RAGのチャンキング戦略を比較する ― 固定長・再帰的・意味的分割と「親子チャンク」
-**出典:** Zennの「大規模言語モデル」のフィード | [記事リンク](https://zenn.dev/johnny1024/articles/93201cb4461da6)
+### 5. AIコーディングエージェント向け検出器「impeccable」で自分のHTMLを検査したら94件の指摘が出た
+**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/matsushima_a/articles/day-034-impeccable-detect-contrast)
 
-> RAGを作って最初につまずくのが、検索の精度です。 モデルを変えても改善しない場合、原因はたいてい「チャンキング（文書の分割方法）」にあります。 チャンクが大きすぎると無関係な記述が混ざり、小さすぎると文脈が切れます。
+> 要約 海外AIネタ100日チャレンジのDay 034。 GitHub TrendingのJavaScript/TypeScriptランキングで急伸していたpbakaus/impeccable(Apache-2. impeccableは、AIコーディングエージェントが生成するUIに特有の「いかにもAI感(AIスロップ)」なデザインパターンを、62個の決定論的なルールでLLM・APIキーなしに検出するCLIツール。
 
 **転用示唆:** 本業
 
-### 10. RAGのチャンキング戦略を比較する ― 固定長・再帰的・意味的分割と「親子チャンク」
-**出典:** Zennの「Python」のフィード | [記事リンク](https://zenn.dev/johnny1024/articles/93201cb4461da6)
+### 6. AIエージェントの購入委任をRubyで扱う — AP2対応SDK v1.0.0を公開しました
+**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/ccq/articles/6ca97030e6c8fd)
 
-> RAGを作って最初につまずくのが、検索の精度です。 モデルを変えても改善しない場合、原因はたいてい「チャンキング（文書の分割方法）」にあります。 チャンクが大きすぎると無関係な記述が混ざり、小さすぎると文脈が切れます。
+> AIエージェントがユーザーの代わりに商品を購入する場合、販売者はどうやって「このAgentには、その商品を買う権限がある」と確認すればよいのでしょうか。 この課題に取り組む仕組みの一つが、AP2（Agentic Payment Protocol）です。 AP2のCheckout MandateをRubyで扱うOSS、ap2_mandate_verifierのv1.
+
+**転用示唆:** 本業
+
+### 7. EVM simulationが成功しても止める：AIエージェントのALLOW・WARN・BLOCK設計
+**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/rinku/articles/evm-simulation-policy-decisions)
+
+> EVMトランザクションを組み立てるエージェントでは、送信前に「callが成功するか」と「アプリの方針として進めてよいか」を分けて扱う必要があります。 TxGuardの判定層を使って、同じsimulation成功でもALLOW・WARN・BLOCKが変わる例をローカルで再現します。 対象は、すでにEVM callを作っているTypeScript開発者です。
+
+**転用示唆:** 本業
+
+### 8. VOICEVOXの読み間違いをAmiVoiceで探したら、見つかったのは別の問題だった
+**出典:** Zennの「Python」のフィード | [記事リンク](https://zenn.dev/nanotoylab/articles/22059bc51b749c)
+
+> 短い動画の読み上げにVOICEVOXを使っています。 読み間違いは聞いて確かめるしかなく、本数が増えると手間です。 そこで、読み上げた音声をAmiVoice APIで文字に戻し、台本と比べて読み間違いを自動で探すツールを作りました。
+
+**転用示唆:** 本業
+
+### 9. 三人将棋では「駒得は正義」が通用しない  ―― 【出る杭は打たれる】
+**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/mataasobo/articles/58c207cd3de160)
+
+> 自作の三人将棋で、AlphaZero 方式で学習させたAI2人と対局しました。 受け続けて粘ったら持ち駒が19枚まで増えましたが、負けました。 気になってデータを調べると、三人将棋では、持ち駒は5枚を超えると持っているだけで損になっていました。
+
+**転用示唆:** 本業
+
+### 10. ISUCON2026 で優勝しました（当日編）
+**出典:** Zennのトレンド | [記事リンク](https://zenn.dev/luvtechno/articles/isucon2026-competition-day)
+
+> はじめに こんにちは！ @kawasy です。 活動の主なテーマは、ソフトウェアプロダクト開発企業に必要なCTO機能の提供と育成です。
 
 **転用示唆:** 本業
 
 ---
 
-*Generated by content-hub at 09:58 JST*
+*Generated by content-hub at 12:01 JST*
