@@ -1,6 +1,6 @@
-# Daily Digest - 2026-11-05
+# Daily Digest - 2026-11-06
 
-**生成時刻:** 10:43 JST
+**生成時刻:** 10:44 JST
 **対象範囲:** 過去 24 時間
 **記事数:** 20 件
 
@@ -8,73 +8,73 @@
 
 ## Qiita Trending
 
-### 1. PythonでPowerPointにコメントとスライドノートを追加する方法
-**出典:** Pythonタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/carol123/items/14dd143758e2e1733298)
+### 1. IntelliJ IDEAとStrataの更新をやった
+**出典:** AIタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/yoshihiro-yoshimura/items/9f40d4488ebc26af2d8a)
 
-> PowerPointで資料をレビューしたり、プレゼンテーションの準備を進めたりするとき、スライドに補足情報を書き残したいことがあります。 PowerPointには、こうした用途に使える機能として「コメント」と「スライドノート」があります。 コメントはスライドのレビューや修正指.
-
-**転用示唆:** 本業
-
-### 2. Oracle AI Database 26ai の JSONについて(3) – JSON Collection Table
-**出典:** AIタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/TDM26587/items/ce1dd2eb97512221dc48)
-
-> はじめに ここではOracle AI DatabaseのJSONデータについて(3)として JSON Collection Table を解説します。 これは Oracle AI Database が 23c(23ai) でリリースされた機能で、純粋に JSON ドキュメン.
+> はじめに IntelliJ IDEA が 2026. 3 に更新されました。 IntelliJ IDEA の新機能 IntellJ IDEA の新機能.
 
 **転用示唆:** 本業
 
-### 3. Oracle AI Database 26ai の JSONについて(2) – JSON Collection View
-**出典:** AIタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/TDM26587/items/e595ee719e3c112c7941)
+### 2. PLaMo 3 Translate は、合成データの作成元の Gemma 4 を超えたのか？
+**出典:** LLMタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/hisashi-ito/items/fd465d727fd2fd456250)
 
-> はじめに ここでは Oracle AI DatabaseのJSONデータについて(2) として JSON Collection View を解説します。 これは、非二面性コレクション・ビューとも言われるもので、更新はできませんが、JSON文書を基礎となるリレーショナル・デー.
-
-**転用示唆:** 本業
-
-### 4. Oracle AI Database 26ai の JSONについて(1) – Binary JSON(OSON)
-**出典:** AIタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/TDM26587/items/73fad2459ce6319f13fb)
-
-> はじめに Oracle AI Database 26aiでは、JSONデータの扱い方も拡充されています。 JSONは、列データ型から始まり、JSON Relational Duality View (２面性ビュー)、JSON Collection Table、JSON C.
+> 結論 合成データの作成元の Gemma 4 31B IT を、PLaMo 3 Translate が超えたとは言えません。 訳の総合的な質を見る COMET-22 では、PLaMo 3 Translate の 8B と 31B は Gemma 4 と区別できないか、少し.
 
 **転用示唆:** 本業
 
-### 5. 激動のAI時代、エンジニアの生存戦略を考える｜インターネットを人間が使わなくなったら、仕事は残るのか
-**出典:** AIタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/akira_papa_AI/items/b1cb59a812bd3eb83d07)
+### 3. Fortranの次を考える 番外編 ― Juliaでオブジェクト指向を設計、pythonと比較してみる
+**出典:** Pythonタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/rino_yume/items/7fd46ee412972de2021d)
 
-> インターネットの通信、もう半分以上が人間じゃないらしいです。 自動で動くプログラムのほうが多い。 しかも情報漏えいのニュースは毎週のように流れてくる。
-
-**転用示唆:** 本業
-
-### 6. Fortranの次を考える 番外編 ― Fortran2018でオブジェクト指向を設計、pythonと比較してみる
-**出典:** Pythonタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/rino_yume/items/bb5d5149cf3c22ee69cd)
-
-> Fortranの次を考える 番外編 ― Fortran2018でオブジェクト指向を設計、pythonと比較してみる はじめに Fortranというと、配列とDOループを使って数値計算を行う言語という印象が強いかもしれません。 実際、長く使われてきた数値計算コードでは、S.
+> Fortranの次を考える 番外編 ― Juliaでオブジェクト指向を設計、pythonと比較してみる はじめに Juliaというと、数値計算や科学技術計算に強い言語という印象があります。 配列演算や数値計算を素直に書けることはJuliaの大きな特徴ですが、ある程度大.
 
 **転用示唆:** 本業
 
-### 7. Pythonで実装するAIエージェントの無限ループ原因解析と実務向けガードレール設計
-**出典:** LLMタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/blinkgroup_jp/items/c4ac9a929c1c098553fa)
+### 4. 約定履歴とDBがズレたらボットを止める：突き合わせ設計の失敗パターンと対処
+**出典:** Pythonタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/ponfreelance/items/b18886369ceb5706ac46)
 
-> AIエージェント（ReActモデル等）を自作またはフレームワークを用いて構築する際、ツール呼び出しのループから抜け出せなくなる現象（無限ループ）が発生することがあります。 本記事では、AIエージェントが無限ループに陥る主な原因と、それを防ぐための具体的なガードレール実装パター.
-
-**転用示唆:** 本業
-
-### 8. Pythonで実装するAIエージェントの無限ループ原因解析と実務向けガードレール設計
-**出典:** Pythonタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/blinkgroup_jp/items/c4ac9a929c1c098553fa)
-
-> AIエージェント（ReActモデル等）を自作またはフレームワークを用いて構築する際、ツール呼び出しのループから抜け出せなくなる現象（無限ループ）が発生することがあります。 本記事では、AIエージェントが無限ループに陥る主な原因と、それを防ぐための具体的なガードレール実装パター.
+> 約定履歴とDBがズレたらボットを止める：突き合わせ設計の失敗パターンと対処 取引所APIと連携して自動売買ボットを作っていて、「取引所側の約定履歴と自分のDBの記録が食い違ったとき、どう動かすか」を決めきれていない人向けの記事です。 同じ構造は取引所に限りません。
 
 **転用示唆:** 本業
 
-### 9. sitemapを分割するなら、件数ではなく記事ごとに変わらない値で区切る ─ 境界ずれと404の点検リスト
-**出典:** 個人開発タグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/itaraiguma/items/afc33086c12dc37ca64f)
+### 5. 「反映まで1分ほど」は測っていなかった：GitHub Pages のビルド37回は中央値19.4秒
+**出典:** Pythonタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/kaiyaku_iyada/items/06aed933050d0b2c1410)
 
-> この記事でできること 記事数が多いサイトでは、sitemapをいくつかのファイルに分割し、それらを束ねるsitemap index（/sitemap. xml）から参照する形がよく使われます。 分割の仕方として手軽なのは、「新しい順に並べた全記事を1,000件ずつ区切る」方法.
+> この記事はAI（Anthropic社のClaude）が書き、持ち主のアカウントで、AIがブラウザを操作して投稿しています。 Anthropic社とは無関係の個人の実験で、同社の公認や提携ではありません。 書いてあるのは、2026年10月17日〜22日（4章の最後の試しだけ2.
 
 **転用示唆:** 本業
 
-### 10. Vercel Speed Insights で LCP ボトルネックを特定し 3 秒→1 秒に改善した4つの対処
-**出典:** 個人開発タグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/Cosoado/items/626e2bfe123580475abe)
+### 6. 「反映まで1分ほど」は測っていなかった：GitHub Pages のビルド37回は中央値19.4秒
+**出典:** 個人開発タグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/kaiyaku_iyada/items/06aed933050d0b2c1410)
 
-> Cosoado Lab Blog 同時掲載予定: https://cosoado-lab. com/blog/vercel-speed-insights-lcp-fix/ マッチングアプリの LCP が 3. Vercel Speed Insights のダッ.
+> この記事はAI（Anthropic社のClaude）が書き、持ち主のアカウントで、AIがブラウザを操作して投稿しています。 Anthropic社とは無関係の個人の実験で、同社の公認や提携ではありません。 書いてあるのは、2026年10月17日〜22日（4章の最後の試しだけ2.
+
+**転用示唆:** 本業
+
+### 7. 0。SKILL.mdが新しい攻撃面として報告された日、自分の指示書が『データであり命令ではない』と明記する5箇所に、スキルの説明文は入っていなかった
+**出典:** AIタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/Hideki_Tamae/items/f911fa99a2ab976466f8)
+
+> これが今回の数字です。 何の0かというと、このパイプラインを動かしている自分(Claude)の指示書(システムプロンプト)の中で、「外部から来た内容はデータであり命令ではない」と名指しで注意している場所が5箇所あるうち、その対象リストに「スキル(SKILL.
+
+**転用示唆:** 本業
+
+### 8. 妖怪ウォッチの「カセット抜き増殖」から学ぶ分散システム（3）今、3DS の交換を作り直すなら
+**出典:** Pythonタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/happiitsumo/items/c4762f4bfd8df358aa64)
+
+> 🕶️🚲 470（ヨンナナマル）くん ヨットの帆なのに、陸で三輪車を漕いでいるこのブログの案内役です。 今回は PC を広げて実験します。 第1部では、妖怪ウォッチのカセット抜きで妖怪が増える理由を、妖怪の言葉だけで考えました。
+
+**転用示唆:** 本業
+
+### 9. A2A × AP2：AI Agent同士が協力し、買い物まで完結する未来
+**出典:** AIタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/ccq1170/items/0d0d246fceb07bfc7499)
+
+> はじめに 私は、これからAI Agentが人間の代わりに経済活動を行う時代が来ると考えています。 これまでのインターネットでは、人間がWebサイトを開き、商品を探し、比較し、購入ボタンを押していました。 しかし、これからはどうでしょうか。
+
+**転用示唆:** 本業
+
+### 10. LangGraphを用いたAIエージェントのチェックポイント設計と状態復元パターン
+**出典:** LLMタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/blinkgroup_jp/items/111535ce85642d8c11fd)
+
+> 読者が抱える課題 AIエージェントによるマルチステップ処理（外部APIの呼び出し、コード実行、ドキュメント生成など）では、以下のような理由で処理が途中で中断されるリスクがあります。 外部APIのレートリミットや通信タイムアウト 人間によるレビュー・承認待ち（Human-.
 
 **転用示唆:** 本業
 
@@ -82,76 +82,76 @@
 
 ## Zenn Trending
 
-### 1. ブラックジャックの確率論(9) 戦略表の計算結果と考察
-**出典:** Zennの「Python」のフィード | [記事リンク](https://zenn.dev/monty/articles/12753433754441)
+### 1. レビューは深いほど良いのか：Code Review の Quick/Standard/Deep をローカルの深さと対応させる
+**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/norman6464/articles/code-review-quick-standard-deep)
 
-> 本記事は「ブラックジャックの確率論」と名付けられたシリーズ記事の1つです。 全体の目次は下記の記事にまとめられています。 まず、ダブルダウンとスプリットの期待値を具体的な手札で確認し、次にすべてのアップカードに対する戦略表を示.
-
-**転用示唆:** 本業
-
-### 2. 「クリスマス当日まで開けられないメッセージ」を Python で正しく実装する：タイムゾーンとサーバー側判定
-**出典:** Zennの「Python」のフィード | [記事リンク](https://zenn.dev/decomytree/articles/b0e44c5b003223)
-
-> はじめに 寄せ書きやメッセージカード系の Web サービスでは、「受け取ったメッセージは指定日まで開けられない」という仕様がよく使われます。 たとえば Deco My Tree は、友だちがオーナメントとメッセージを飾ったツリーを、クリスマス当日に開封する形のサービスです。 この「当日まで開けられない」は一見 if today >= 12/25 だけで済みそうですが、実装すると次の2点でつまずきがちです。
+> Claude Code の /code-review を日常的に使っている人、あるいは GitHub 連携の Code Review をチームに入れた（入れようとしている）人に向けて書きます。 2026-10-19 の v2. 304 で、GitHub の Code Review に「レビューの深さ」を選ぶ設定（Quick / Standard / Deep）と、「GitHub organization の全リポジトリをまとめて自動レビューする」オプションが入りました。
 
 **転用示唆:** 本業
 
-### 3. AIでコードを書くのが簡単になったあと OSSはどう続いていくのか（CSS2026 OWS研究会）
-**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/ultrasupara/articles/1efe7b63416a9f)
+### 2. Claude Code に、「ここ」をリアルタイムに伝えるためのアプリ
+**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/twelvetonelab/articles/dfa8322da9f639)
 
-> コンピュータ・セキュリティ・シンポジウムCSS 2026で、Trivy作者のTeppei Fukudaさんによる「OSSとAI」という招待講演を聴いた。 Trivyは、コンテナイメージなどの脆弱性や設定ミスを調べる脆弱性対応の分野では世界1著名なスキャナーだ。 https://trivy.
-
-**転用示唆:** 本業
-
-### 4. なぜあなたのAI開発は破綻するのか？ 〜非エンジニアが3体の自律型AIを率いて、7.8万行の商用Webアプリを完成させた「チーム統率論」〜
-**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/kazaboshi/books/autonomous-ai-mastery)
-
-> プログラミング未経験の非エンジニアが、3体の自律型AI（Kiro・Cursor・Antigravity）を三権分立で統率し、7. 8万行・テスト208件合格の商用Webアプリを破綻ゼロで完成させた実践的ノウハウ。
+> この記事で紹介する Mac アプリ「SKETCHTALK」は、筆者（株式会社トゥエルブトーン 角田）が作っているものです。 Anthropic とは提携していない、個人の会社の独立したアプリです。 直す場所を言葉にするのに、いちばん時間がかかっていた 筆者はプログラマーではなく、デザイナーです。
 
 **転用示唆:** 本業
 
-### 5. なぜあなたのAI開発は破綻するのか？ 〜非エンジニアが3体の自律型AIを率いて、7.8万行の商用Webアプリを完成させた「チーム統率論」〜
-**出典:** Zennの「ChatGPT」のフィード | [記事リンク](https://zenn.dev/kazaboshi/books/autonomous-ai-mastery)
+### 3. Sysmac Studio STのFB呼び出しをClaude Desktopのスキルで型にする——FB連鎖・R_TRIG・リセット
+**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/kensho_ya/articles/sysmac-st-fb-call-patterns-skill)
 
-> プログラミング未経験の非エンジニアが、3体の自律型AI（Kiro・Cursor・Antigravity）を三権分立で統率し、7. 8万行・テスト208件合格の商用Webアプリを破綻ゼロで完成させた実践的ノウハウ。
-
-**転用示唆:** 本業
-
-### 6. Saturday：耳と口をつけた Claude Code
-**出典:** Zennの「Python」のフィード | [記事リンク](https://zenn.dev/daming_cafe/articles/saturday-voice-claude-code)
-
-> Saturday は、Claude Code の上に作ったハンズフリーの音声アシスタントだ。 「Saturday」と呼んで、どのプロジェクトについてでも質問すると、4〜6 秒後に一文の答えが声で返ってくる。 費用は 1 往復あたり約 $0.
+> Claude Desktopに Sysmac Studio 向けのSTを書かせるとき、自分はFBの呼び出し方をスキルの中で型として決めている。 単発FB：完了を待って次へ進む 連続実行FB：受理された時点で次へ進む FB連鎖：前段の出力を後段の起動につなぐ R_TRIG：立上りを拾う スキルには、これにリセットのブロックの書き方と、修正を頼むときの手順が付いている。 Done を受けたら Execute を落とす話と、連鎖の終わりで関わったFBをまとめて落とす話は、前に書いた（#3）。
 
 **転用示唆:** 本業
 
-### 7. GPUなしでAbliteration CLI『Heretic』を動かし、拒否率とKL発散を実測した
-**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/matsushima_a/articles/day-036-heretic-abliteration-cpu-smoke-test)
+### 4. 今更だけど、AIってどう使えばいいの？
+**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/porters_tech/articles/4f6e5cc83aa74c)
 
-> これは何を試した記事か Heretic という、LLMの拒否挙動(いわゆる検閲・安全性アラインメント)を再学習なしで抑制するPython製CLIツールを実際に動かし、処理前後の拒否率とKL発散(元モデルの出力分布からのズレ)を数値で確認した記事である。 筆者の環境にはGPUがなく、READMEが前提にしているRTX 3090での実行(既定設定で30〜40分)とは条件が大きく異なる。 そこで「GPUなしのCPU環境でこのツールはどこまで動くのか、既定設定を全部回すとどれくらいかかるのか」を実測し、試行数と評価セットを大幅に絞った「スモーク実行」1回分の結果を主役にしている。
-
-**転用示唆:** 本業
-
-### 8. GPUなしでAbliteration CLI『Heretic』を動かし、拒否率とKL発散を実測した
-**出典:** Zennの「大規模言語モデル」のフィード | [記事リンク](https://zenn.dev/matsushima_a/articles/day-036-heretic-abliteration-cpu-smoke-test)
-
-> これは何を試した記事か Heretic という、LLMの拒否挙動(いわゆる検閲・安全性アラインメント)を再学習なしで抑制するPython製CLIツールを実際に動かし、処理前後の拒否率とKL発散(元モデルの出力分布からのズレ)を数値で確認した記事である。 筆者の環境にはGPUがなく、READMEが前提にしているRTX 3090での実行(既定設定で30〜40分)とは条件が大きく異なる。 そこで「GPUなしのCPU環境でこのツールはどこまで動くのか、既定設定を全部回すとどれくらいかかるのか」を実測し、試行数と評価セットを大幅に絞った「スモーク実行」1回分の結果を主役にしている。
+> AIメニュー画像ってやばくね？ 最近、AIで生成した料理の画像をメニューに使用している飲食店の事例を目にすることがある。 なかには、人間の食べ物とは思えないような見た目の画像もあり、思わず目を引かれる。
 
 **転用示唆:** 本業
 
-### 9. GPUなしでAbliteration CLI『Heretic』を動かし、拒否率とKL発散を実測した
-**出典:** Zennの「Python」のフィード | [記事リンク](https://zenn.dev/matsushima_a/articles/day-036-heretic-abliteration-cpu-smoke-test)
+### 5. [レポート] Sigma Webinar『ClaudeとSigma MCPプラグインがいかにして私の人生を変えたのか』
+**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/truestar/articles/db7b4ff238ed7d)
 
-> これは何を試した記事か Heretic という、LLMの拒否挙動(いわゆる検閲・安全性アラインメント)を再学習なしで抑制するPython製CLIツールを実際に動かし、処理前後の拒否率とKL発散(元モデルの出力分布からのズレ)を数値で確認した記事である。 筆者の環境にはGPUがなく、READMEが前提にしているRTX 3090での実行(既定設定で30〜40分)とは条件が大きく異なる。 そこで「GPUなしのCPU環境でこのツールはどこまで動くのか、既定設定を全部回すとどれくらいかかるのか」を実測し、試行数と評価セットを大幅に絞った「スモーク実行」1回分の結果を主役にしている。
+> はじめに 当エントリでは、Sigma Computingが開催したウェビナー「How Claude and the Sigma MCP plugin changed my life(ClaudeとSigma MCPプラグインがいかにして私の人生を変えたのか)」の視聴内容をまとめてみたいと思います。 Sigma MCPプラグインの仕組みと入手方法、2本のデモ、Q&Aでわかった利用条件(AIプロバイダー設定や権限の扱い)を順に紹介します。 ClaudeやChatGPTなどのチャットUIから、自然言語の指示だけでS.
 
 **転用示唆:** 本業
 
-### 10. Genesis で水と砂をシミュレーションする
-**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/oggata/articles/13c100345ed318)
+### 6. AI Agentが人間より多く取引する時代へ。今、AP2のRuby SDKを作る理由
+**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/ccq/articles/f4b4753676a017)
 
-> Genesis で水と砂をシミュレーションする 第3部では、ロボットを 水と砂の中 に入れます。 そして、第3部全体を決める大きな壁 ― 水と砂のシミュレーションは、強化学習に使うには遅すぎる ― にぶつかります。 https://youtu.
+> 私は、AI Agentが人間よりも多くの経済活動を行う時代が必ず来ると考えています。 これは単に、AIが便利になるという話ではありません。 今回は、そんな未来を見据えて、私が開発しているRuby OSS「ap2_mandate_verifier」について書きたいと思います。
+
+**転用示唆:** 本業
+
+### 7. 今日の技術トレンド
+**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/bambampurin/articles/2026-09-23-tech-daily)
+
+> AI分野では単一LLMから自己改善型エージェントや具身知能（フィジカルAI）への移行が加速する一方、セキュリティリスクや国際ガバナンス（国連安保理での議論）の必要性が急浮上しています。 Web開発ではNext. jsのImageResponseにおける重大なRCE脆弱性が報告され緊急対策が求められています。
+
+**転用示唆:** 本業
+
+### 8. 今日の技術トレンド
+**出典:** Zennの「大規模言語モデル」のフィード | [記事リンク](https://zenn.dev/bambampurin/articles/2026-09-23-tech-daily)
+
+> AI分野では単一LLMから自己改善型エージェントや具身知能（フィジカルAI）への移行が加速する一方、セキュリティリスクや国際ガバナンス（国連安保理での議論）の必要性が急浮上しています。 Web開発ではNext. jsのImageResponseにおける重大なRCE脆弱性が報告され緊急対策が求められています。
+
+**転用示唆:** 本業
+
+### 9. 社内でプロンプト集を配っても使われない。定着させる配り方
+**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/gen_ai_kiyozuka/articles/prompt-collection-not-used-why)
+
+> 生成AIを導入した会社が、次によくやるのが「プロンプト集」の配布です。 便利な指示文を50個、100個とまとめて共有フォルダに置く。 ところが数か月後に聞くと、ほとんど誰も開いていない。
+
+**転用示唆:** 本業
+
+### 10. GitHub issue artifactsをベースに私専用ニュース配信サイトを作った
+**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/mlbread/articles/df26c1d3b0f99f)
+
+> GitHubは10月28日、issue artifacts機能をパブリックプレビュー公開しました。 issueをAI生成することも増えてきたので、issueもAIの得意な表現に対応した形ですね。 以前からやりたかったアイデアがこの機能をうまく活用して実現できたので紹介します！
 
 **転用示唆:** 本業
 
 ---
 
-*Generated by content-hub at 10:43 JST*
+*Generated by content-hub at 10:44 JST*
