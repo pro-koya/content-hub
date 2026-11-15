@@ -1,6 +1,6 @@
-# Daily Digest - 2026-11-14
+# Daily Digest - 2026-11-15
 
-**生成時刻:** 10:38 JST
+**生成時刻:** 10:12 JST
 **対象範囲:** 過去 24 時間
 **記事数:** 20 件
 
@@ -8,73 +8,73 @@
 
 ## Qiita Trending
 
-### 1. AIエージェントの正体は「ループ」だった｜APIキー不要、Python 50行以内で仕組みを再現する
-**出典:** LLMタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/pds_siken/items/a65ea3bf15c5d7d0ec57)
+### 1. LLMが変革する多言語翻訳・ローカライズ：自動化と一貫した表現でグローバル市場を攻略
+**出典:** LLMタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/Maku-Inc/items/24d00f3fac4e6fc332ed)
 
-> はじめに 「AIエージェント」という言葉をよく聞くようになりました。 チャットで答えるだけでなく、"自分で道具（ツール）を選んで使い、タスクを進める"AIのことです。 難しそうに聞こえますが、仕組みの骨格は意外とシンプルです。
-
-**転用示唆:** 本業
-
-### 2. AIエージェントの正体は「ループ」だった｜APIキー不要、Python 50行以内で仕組みを再現する
-**出典:** Pythonタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/pds_siken/items/a65ea3bf15c5d7d0ec57)
-
-> はじめに 「AIエージェント」という言葉をよく聞くようになりました。 チャットで答えるだけでなく、"自分で道具（ツール）を選んで使い、タスクを進める"AIのことです。 難しそうに聞こえますが、仕組みの骨格は意外とシンプルです。
+> LLMが変革する多言語翻訳・ローカライズ：自動化と一貫した表現でグローバル市場を攻略 課題・背景 グローバル市場での競争が激化する現代において、多言語対応は企業の生命線とも言える重要な要素です。 しかし、この「多言語対応」が多くの開発チームやビジネスサイドにとって大きなボ.
 
 **転用示唆:** 本業
 
-### 3. Claude Code 開発者が注目している5つのアップデート（v2.1.321 - v2.1.325）
-**出典:** AIタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/NaokiIshimura/items/497afd9a11879d369d19)
+### 2. Windows で python -I にすると日本語が化ける。PYTHONUTF8 を無視するので -X utf8 を付ける
+**出典:** Pythonタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/takamatt_ai/items/3de085a6cd6fbdfd2147)
 
-> Claude Code の v2. 325 の中から、実務への影響が大きいと思われるものを5つ選んで深掘りします。 網羅的な変更点一覧は リリースノートまとめ にあるので、今回は「なぜ注目に値するか」にフォーカスします。
-
-**転用示唆:** 本業
-
-### 4. Claude Code v2.1.321 - v2.1.325 リリースノートまとめ
-**出典:** AIタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/NaokiIshimura/items/59520039c1504a84cf89)
-
-> Claude Code v2. 325 では、新しいデフォルト Fable モデル Claude Fable 5. 2 の追加、Claude がツールを JavaScript で呼び出す実験的な Code Mode、プラグインの engines["clau.
+> Windows で python -I(隔離モード)にしたら、日本語が化けました。 -X utf8 を一緒に付けると直ります。 13)で、短いスクリプトを動かして、画面の表示とバイト列を見て確かめました(2026-.
 
 **転用示唆:** 本業
 
-### 5. 2026年11月14日 今日のQiitaトレンド記事をポッドキャストで聴こう！
-**出典:** AIタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/ennagara128/items/d9fa6da5a42bf05867a3)
+### 3. Docker ComposeでPython + GoNB + Juliaをまとめて使うJupyterLab環境を作る【r001】
+**出典:** Pythonタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/rino_yume/items/221d025ffeca89a5a4c1)
 
-> 前日夜の最新トレンド記事のAIポッドキャストを毎日朝7時に更新しています。 通勤中などにながら聴きしよう！ （Qiita投稿は通勤には間に合わないと思われますが） フィードバックとか助かりますのでください ↓こちらから 出典 【AWS】AWS EmulatorでCDK/T.
-
-**転用示唆:** 本業
-
-### 6. ChatGPTでコードを貼っていた頃があったから、Codexでアプリを作れた気がする
-**出典:** 個人開発タグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/Iwata-san/items/75fc21ca3129d7f46d4b)
-
-> はじめに 今回もコードの解説ではなく、ChatGPTとの開発を 振り返って気づいたことを書きます。 前回の記事を書くために、昔の開発ログを読み返しました。 前回の記事：Pythonのif文とfor文がわかる程度の私が、生成AIとWindowsアプリを作って公開するまで エ.
+> Docker ComposeでPython + GoNB + Juliaをまとめて使うJupyterLab環境を作る【r001】 はじめに GoのコードをJupyterLabで実行できるのか調べていると、GoNBというJupyterカーネルが見つかりました。
 
 **転用示唆:** 本業
 
-### 7. 語源英単語アプリ開発で、Claude Code のコスト削減のため、検証を TYPESAFE AI の Jev に任せてみた
-**出典:** LLMタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/emuyn/items/50bbed74e49e49198587)
+### 4. ゼロから作るDeep Learning全6冊を読破すると何ができるようになるのか
+**出典:** AIタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/mahaya123/items/7b376637d60e4764e01d)
 
-> 語源で英単語を覚える Web アプリ「Etymo! 」と、医学用語版の「Metymo! 」のデータを、Claude Code で直す作業をしました。
-
-**転用示唆:** 本業
-
-### 8. AI に Pyxel 3 の 3D（pyxel.cube）を作らせてわかったこと ── ハマりどころの予防・検証ループ・3D素材の作り方
-**出典:** AIタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/haruka_apps/items/5f376546737fbb37ad89)
-
-> cube が入りました。 AI エージェント向けの公式 MCP サーバー pyxel-mcp も、1. cube に対応しました（エージェント用のスキル.
+> はじめに AIを使えることと、AIを作れることは違う。 ChatGPTのAPIを呼び出したり、Pythonで機械学習ライブラリを動かしたりすることは、それほど難しくなくなった。 しかし、ニューラルネットワークがなぜ学習できるのか、Transformerはどのように文章を処理.
 
 **転用示唆:** 本業
 
-### 9. AI に Pyxel 3 の 3D（pyxel.cube）を作らせてわかったこと ── ハマりどころの予防・検証ループ・3D素材の作り方
-**出典:** Pythonタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/haruka_apps/items/5f376546737fbb37ad89)
+### 5. ゼロから作るDeep Learning全6冊を読破すると何ができるようになるのか
+**出典:** Pythonタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/mahaya123/items/7b376637d60e4764e01d)
 
-> cube が入りました。 AI エージェント向けの公式 MCP サーバー pyxel-mcp も、1. cube に対応しました（エージェント用のスキル.
+> はじめに AIを使えることと、AIを作れることは違う。 ChatGPTのAPIを呼び出したり、Pythonで機械学習ライブラリを動かしたりすることは、それほど難しくなくなった。 しかし、ニューラルネットワークがなぜ学習できるのか、Transformerはどのように文章を処理.
 
 **転用示唆:** 本業
 
-### 10. AI に Pyxel 3 の 3D（pyxel.cube）を作らせてわかったこと ── ハマりどころの予防・検証ループ・3D素材の作り方
-**出典:** 個人開発タグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/haruka_apps/items/5f376546737fbb37ad89)
+### 6. AIアシスタント「Grok Bot」をセットアップして、メール整理から献立・買い物エージェントまで作ってみた
+**出典:** AIタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/junko105106/items/dbf759f029e31a5fa325)
 
-> cube が入りました。 AI エージェント向けの公式 MCP サーバー pyxel-mcp も、1. cube に対応しました（エージェント用のスキル.
+> はじめに AIアシスタントの「Grok Bot」を使い始めてみました。 チャットで答えを返すだけでなく、自分専用のコンピューターを持っていて、こちらのアプリ（メールなど）に接続して実際に作業してくれるのが特徴です。 この記事では、初回セットアップから、 メールアカウントの.
+
+**転用示唆:** 本業
+
+### 7. 0。Claude Enterpriseに『推奨設定と比較するセキュリティセンター』が追加されたと報じられた週、自分のクラウド環境の許可ホストを数えたら、この数字だった
+**出典:** AIタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/Hideki_Tamae/items/880fb8afa49cfa65e9a2)
+
+> これが今回の数字です。 何の0かというと、この記事とZenn版を自動で書いて投稿している自分自身のクラウド実行環境(Claude Code Remoteの"Default"環境)について、get_environmentで取得した「明示的に許可されているホスト.
+
+**転用示唆:** 本業
+
+### 8. 01Routerで動画・画像・音声・テキスト生成APIを1つのキーにまとめる
+**出典:** AIタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/paidx2006/items/ad03cd0d5aab5e7c8ada)
+
+> 01Routerとは 01Router は、動画・画像・テキスト・音声のAIモデルを1つのAPIキーで利用できるサービスです。 Web Studioで生成を試せるほか、アプリケーションから動画・画像生成APIとして組み込めます。 モデルとプロバイダーを選ぶ 用途に応じてモ.
+
+**転用示唆:** 本業
+
+### 9. Python機械学習の基礎固め3冊
+**出典:** Pythonタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/koukyo/items/570476317ffbc7a90642)
+
+> はじめに 数年前、自分は社内の売上予測モデルの面倒を見る役を引き継いだ。 前任者が残したノートブックは、pandas のメソッドチェーンが延々と並び、最後に RandomForestRegressor を呼ぶだけの構成だった。 ただ、予測が外れ始めた月に「なぜ外.
+
+**転用示唆:** 本業
+
+### 10. .gitignoreの末尾スラッシュはシンボリックリンクに効かない ─ git worktreeで共有したディレクトリが未追跡にならないようにする
+**出典:** 個人開発タグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/itaraiguma/items/1a5ea022fc3e20debbf8)
+
+> この記事でできること git worktreeで作業ツリーを分けるとき、メインの作業ディレクトリにある設定やデータのディレクトリをシンボリックリンクで共有することがあります。 gitignoreにshared/のように末尾スラッシュ付きで書いていると、メイン側で.
 
 **転用示唆:** 本業
 
@@ -82,76 +82,76 @@
 
 ## Zenn Trending
 
-### 1. 人間は0行、検証は4.2万行 ― Claude Code × Codex でスーファミ格闘ゲームを作った57日
-**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/hawkymisc/books/human-zero-lines-snes-fighter)
+### 1. 96GBのミニPCで大規模MoEを動かしてみた — Radeon 890MとStrataの試行錯誤
+**出典:** Zennの「大規模言語モデル」のフィード | [記事リンク](https://zenn.dev/masahito/articles/4e5af1d32cb2dc)
 
-> コードを1行も書かず、判断だけをした57日間の実録。 Codex と Claude Code の2つのAIエージェントに、スーパーファミコン用の2D対戦格闘ゲーム、M5Stack CoreS3 用のエミュレーター、macOS版・Web版を作らせた。 363のセッション、1,010コミット、228のPRという一次資料から、何が壊れ、どう止め、どう機械で保証させたかを書く。
-
-**転用示唆:** 本業
-
-### 2. Antigravity CLIでコメントを監視する：セットアップと実データ
-**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/everyinfra/articles/antigravity-cli-video-comment-monitoring)
-
-> この記事は EveryInfra ブログ からの転載です（原文が正本です）。 動画の公開後24時間で、コメント欄の雰囲気が決まります。 早めに人が対応すべきコメントは3種類あります。
+> はじめに 手元のミニPCで、大規模なMoEモデルを動かしてみました。 もともとはllama. cppを使ってローカルLLMを動かしていましたが、もう少し大きなモデルを動かしてみたくなり、Strataという推論エンジンを試してみました。
 
 **転用示唆:** 本業
 
-### 3. 自分のサイトを12個のAIに審査させたら、人間度12から100まで全部出た話
-**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/ray_9618/articles/6ec984248b8ee3)
+### 2. GPTBotは0回、OAI-SearchBotは4,847回。AIクローラーを30日間観測して分かったこと
+**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/rimonoa/articles/8974167fe581c2)
 
-> 前提として、この記事もAI（Muse）の支援を受けて記述しています。 はじめに 個人で商用ソフト「Megrab Studio」を開発しています。 そこで気になったのが、公式サイトを見た人は（そしてAIは）これを「AIが作ったサイト」だと思うのか、という点です。
-
-**転用示唆:** 本業
-
-### 4. 自分のサイトを12個のAIに審査させたら、人間度12から100まで全部出た話
-**出典:** Zennの「大規模言語モデル」のフィード | [記事リンク](https://zenn.dev/ray_9618/articles/6ec984248b8ee3)
-
-> 前提として、この記事もAI（Muse）の支援を受けて記述しています。 はじめに 個人で商用ソフト「Megrab Studio」を開発しています。 そこで気になったのが、公式サイトを見た人は（そしてAIは）これを「AIが作ったサイト」だと思うのか、という点です。
+> 自分のサイトに、AIのBotはどのくらい来ているのか。 リモノア（https://rimonoa. jp/）でHTTPリクエストを記録してみると、ある30日集計ではOAI-SearchBotが4,847件、GPTBotが0件でした。
 
 **転用示唆:** 本業
 
-### 5. 異常系テストのモックが、pytest自身のファイル操作も失敗させていた
-**出典:** Zennの「Python」のフィード | [記事リンク](https://zenn.dev/yusuke_shiki/articles/pytest-mock-broke-capture)
+### 3. 「もうちょっと、ここで朝日を浴びときたいわ」を残す介護記録
+**出典:** Zennの「大規模言語モデル」のフィード | [記事リンク](https://zenn.dev/pomodoro_naomi/articles/7b08172f57616a)
 
-> ファイル操作をわざと失敗させて、アプリケーションが正しくエラーを扱えるかを確かめる。 そんな異常系テストで、アプリケーションの処理を呼ぶ前にpytest側の処理が失敗していました。 自作のagent-costで起きた問題です。
-
-**転用示唆:** 本業
-
-### 6. MCP 2026-07-28 仕様入門、既存サーバーの移行点は主要変更9項目
-**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/kai_kou/articles/1288-mcp-2026-07-28-migration-checklist-guide)
-
-> はじめに MCP（Model Context Protocol）の仕様バージョン 2026-07-28 が公開されました。 前版は 2025-11-25 で、公式 changelog の「Major changes」には 9 項目が並んでいます。 対象読者は、2025-11-25 以前の仕様で MCP サーバーまたはクライアントをすでに実装している開発者です。
+> 介護の仕事をしていると、予定の時刻に声をかけても、ご本人にはご本人のタイミングがあるんよね。 いったん見送ったとき、次の職員には「いつ、もう一度お誘いするか」が伝わってほしい。 個別の介護日報には、ご本人がどう過ごしたかったかも残しておきたい。
 
 **転用示唆:** 本業
 
-### 7. MCP 2026-07-28 仕様入門、既存サーバーの移行点は主要変更9項目
-**出典:** Zennの「大規模言語モデル」のフィード | [記事リンク](https://zenn.dev/kai_kou/articles/1288-mcp-2026-07-28-migration-checklist-guide)
+### 4. 「もうちょっと、ここで朝日を浴びときたいわ」を残す介護記録
+**出典:** Zennの「Python」のフィード | [記事リンク](https://zenn.dev/pomodoro_naomi/articles/7b08172f57616a)
 
-> はじめに MCP（Model Context Protocol）の仕様バージョン 2026-07-28 が公開されました。 前版は 2025-11-25 で、公式 changelog の「Major changes」には 9 項目が並んでいます。 対象読者は、2025-11-25 以前の仕様で MCP サーバーまたはクライアントをすでに実装している開発者です。
-
-**転用示唆:** 本業
-
-### 8. コードを書かずに、AIと3日でブラウザゲームを作って公開した話
-**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/tosh1000950/articles/4cdef577c46451)
-
-> コードは1行も書いていません。 やったのは、企画を決めること、素材を用意すること、出来上がったものを実機で遊んで「ここがおかしい」と判定すること。 その繰り返しで、ブラウザで遊べる横スクロールアクション「ほしぞらダッシュ」を公開しました。
+> 介護の仕事をしていると、予定の時刻に声をかけても、ご本人にはご本人のタイミングがあるんよね。 いったん見送ったとき、次の職員には「いつ、もう一度お誘いするか」が伝わってほしい。 個別の介護日報には、ご本人がどう過ごしたかったかも残しておきたい。
 
 **転用示唆:** 本業
 
-### 9. 予測はできていた。それでもCLIが失敗した理由
-**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/yusuke_shiki/articles/prediction-succeeded-cli-failed)
+### 5. Claude Codeに「公開」を押させない：CLAUDE.mdに書く「外に出す操作」の決まり5行
+**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/tsugu_sukima/articles/2b19ac59da1b2a)
 
-> 予測結果は得られているのに、コマンドがエラーで終わる。 自作CLIのspec-laneで、そんな不具合を修正しました。 spec-laneには、過去のAI開発の観測データからトークン使用量を予測する機能があります。
+> この記事でやること Claude Code は、頼まれれば公開に近い操作もそのまま行うことがあります。 筆者が決まりを置かずに「article. md に5行の決まりを書いて、次の3つを Claude Code に守らせます。
 
 **転用示唆:** 本業
 
-### 10. 動いたMCPサーバーを公開する、その前の数分。stdio と鍵の7つの確認
-**出典:** Zennの「Python」のフィード | [記事リンク](https://zenn.dev/zeuslab/articles/7b1a294d6795ae)
+### 6. 【初投稿】僕の個人ウェブサイトを公開しました🌟
+**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/kagam_io/articles/7bb21a81e14830)
 
-> 夜、やっと動いたMCPサーバーを、そのまま公開する。 翌朝リポジトリを開き直して、設定の見本に本物の鍵が残っているのに気づく。 これは、そうなる前の数分のための記事です。
+> はじめに はじめまして、Kagami といいます。 僕はこれまでネットはただ見るだけでした。 人の記事に助けられたり、個人サイトを眺めて「いいな」と思うだけで、自分から何かを発信することはほとんどなかったです。
+
+**転用示唆:** 本業
+
+### 7. Does a “no-limit” image to video AI page mean unlimited free generatio
+**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/sarabuilds/articles/2b106365722f4d)
+
+> The “no-limit” in the image to video AI URL is not evidence of unlimited free generations. You can upload a photo and write a prompt without an account, and some models include one free attempt, but later generations use credits, and the price is shown before you generate. This is the right q.
+
+**転用示唆:** 本業
+
+### 8. ClaudeはSAPの「外側」を取りに来た――SheetsとDataが示す、Jouleとの境界線
+**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/dantarg/articles/claude-sheets-data-outside-sap)
+
+> 私は2003年から、SAPの導入と運用、開発の現場にいます。 その間ずっと見てきた光景があります。 SAPの中で作られた数字は、最後は必ずExcelに出ていく、という光景です。
+
+**転用示唆:** 本業
+
+### 9. ACPを捨てて作り直した ― 他人のAIエージェントに仕事を頼む『sealbridge』をnpm公開した
+**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/acidnyan/articles/5b7c443f14ff89)
+
+> はじめに 以前、他人のClaude CodeやCodexにAPIキーを渡さず仕事を委譲するゼロトラスト基盤「ACP」をOSS公開した という記事を書きました。 あれから開発を進める中で、設計も配布形態も大きく作り直すことになり、後継を sealbridge として公開し直しました。 この記事では、sealbridgeで何ができるか、ACPから何を変えたか、そして実際に「他人のエージェント」へ仕事を投げて完走した記録を紹介します。
+
+**転用示唆:** 本業
+
+### 10. 【House Price】住宅価格予測コンペ前処理編
+**出典:** Zennの「Python」のフィード | [記事リンク](https://zenn.dev/cpp_take/articles/wordpress-000194)
+
+> 概要 Kaggleのチュートリアルの1つ、house priceのコンペに参加しました。 パラメータの加工に時間かかったので、前処理編として記事にします。 価格の予測となるので、タイタニックやMNISTのようなクラスを予想する分類問題（classification）ではなく、数値を予想する回帰問題（regression）となるのがこのコンペの特徴です。
 
 **転用示唆:** 本業
 
 ---
 
-*Generated by content-hub at 10:38 JST*
+*Generated by content-hub at 10:12 JST*
