@@ -1,6 +1,6 @@
-# Daily Digest - 2026-11-15
+# Daily Digest - 2026-11-16
 
-**生成時刻:** 10:12 JST
+**生成時刻:** 10:19 JST
 **対象範囲:** 過去 24 時間
 **記事数:** 20 件
 
@@ -8,73 +8,73 @@
 
 ## Qiita Trending
 
-### 1. LLMが変革する多言語翻訳・ローカライズ：自動化と一貫した表現でグローバル市場を攻略
-**出典:** LLMタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/Maku-Inc/items/24d00f3fac4e6fc332ed)
+### 1. 電話番号を抽出するツールの正規表現を点検したら、「024-1234-5678」という存在しない番号が出ていた
+**出典:** 個人開発タグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/dokoka/items/b03065dd258a1df3bfa1)
 
-> LLMが変革する多言語翻訳・ローカライズ：自動化と一貫した表現でグローバル市場を攻略 課題・背景 グローバル市場での競争が激化する現代において、多言語対応は企業の生命線とも言える重要な要素です。 しかし、この「多言語対応」が多くの開発チームやビジネスサイドにとって大きなボ.
-
-**転用示唆:** 本業
-
-### 2. Windows で python -I にすると日本語が化ける。PYTHONUTF8 を無視するので -X utf8 を付ける
-**出典:** Pythonタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/takamatt_ai/items/3de085a6cd6fbdfd2147)
-
-> Windows で python -I(隔離モード)にしたら、日本語が化けました。 -X utf8 を一緒に付けると直ります。 13)で、短いスクリプトを動かして、画面の表示とバイト列を見て確かめました(2026-.
+> 電話番号を抽出するツールの正規表現を点検したら、「024-1234-5678」という存在しない番号が出ていた TL;DR テキストからメールアドレスと電話番号を抜き出すツールです。 ブラウザの中だけで動き、入力はサーバーに送りません 正解を決めたテスト文で測ると、電話番.
 
 **転用示唆:** 本業
 
-### 3. Docker ComposeでPython + GoNB + Juliaをまとめて使うJupyterLab環境を作る【r001】
-**出典:** Pythonタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/rino_yume/items/221d025ffeca89a5a4c1)
+### 2. 1つのPythonデータから構成表・ワイヤーSVG・遷移CSVを出しFigmaに置く手順
+**出典:** Pythonタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/kusarikakemron/items/9b4762ec13750191f18d)
 
-> Docker ComposeでPython + GoNB + Juliaをまとめて使うJupyterLab環境を作る【r001】 はじめに GoのコードをJupyterLabで実行できるのか調べていると、GoNBというJupyterカーネルが見つかりました。
-
-**転用示唆:** 本業
-
-### 4. ゼロから作るDeep Learning全6冊を読破すると何ができるようになるのか
-**出典:** AIタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/mahaya123/items/7b376637d60e4764e01d)
-
-> はじめに AIを使えることと、AIを作れることは違う。 ChatGPTのAPIを呼び出したり、Pythonで機械学習ライブラリを動かしたりすることは、それほど難しくなくなった。 しかし、ニューラルネットワークがなぜ学習できるのか、Transformerはどのように文章を処理.
+> BtoB の SaaS サイトを作り直したとき、ページの区画を1つの Python データにまとめ、そこから構成表（md）・ワイヤー19枚（SVG）・リンク遷移の CSV を一度に生成しました。 Figma にはその SVG をドラッグで置いています。 構成表とワイヤーを別々に.
 
 **転用示唆:** 本業
 
-### 5. ゼロから作るDeep Learning全6冊を読破すると何ができるようになるのか
-**出典:** Pythonタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/mahaya123/items/7b376637d60e4764e01d)
+### 3. .NET 11のFile-based Apps：C#をスクリプトのように直接実行できるように
+**出典:** AIタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/axzxs2001/items/72f5476a40b508416734)
 
-> はじめに AIを使えることと、AIを作れることは違う。 ChatGPTのAPIを呼び出したり、Pythonで機械学習ライブラリを動かしたりすることは、それほど難しくなくなった。 しかし、ニューラルネットワークがなぜ学習できるのか、Transformerはどのように文章を処理.
-
-**転用示唆:** 本業
-
-### 6. AIアシスタント「Grok Bot」をセットアップして、メール整理から献立・買い物エージェントまで作ってみた
-**出典:** AIタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/junko105106/items/dbf759f029e31a5fa325)
-
-> はじめに AIアシスタントの「Grok Bot」を使い始めてみました。 チャットで答えを返すだけでなく、自分専用のコンピューターを持っていて、こちらのアプリ（メールなど）に接続して実際に作業してくれるのが特徴です。 この記事では、初回セットアップから、 メールアカウントの.
+> C#でプログラムを開発する場合、簡単なツールを作るだけでも、通常はまずプロジェクトを作成し、. csprojファイルを用意してから、dotnet runで実行する必要があります。 正式なソフトウェアシステムであれば、この手順に問題はありません。
 
 **転用示唆:** 本業
 
-### 7. 0。Claude Enterpriseに『推奨設定と比較するセキュリティセンター』が追加されたと報じられた週、自分のクラウド環境の許可ホストを数えたら、この数字だった
-**出典:** AIタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/Hideki_Tamae/items/880fb8afa49cfa65e9a2)
+### 4. Claude CodeでAPIキーを漏らさない：権限ポップアップの「今後許可」が秘密を保存していた実録インシデント対応
+**出典:** AIタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/fukukei23/items/deee2516d6a145ae4af7)
 
-> これが今回の数字です。 何の0かというと、この記事とZenn版を自動で書いて投稿している自分自身のクラウド実行環境(Claude Code Remoteの"Default"環境)について、get_environmentで取得した「明示的に許可されているホスト.
-
-**転用示唆:** 本業
-
-### 8. 01Routerで動画・画像・音声・テキスト生成APIを1つのキーにまとめる
-**出典:** AIタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/paidx2006/items/ad03cd0d5aab5e7c8ada)
-
-> 01Routerとは 01Router は、動画・画像・テキスト・音声のAIモデルを1つのAPIキーで利用できるサービスです。 Web Studioで生成を試せるほか、アプリケーションから動画・画像生成APIとして組み込めます。 モデルとプロバイダーを選ぶ 用途に応じてモ.
+> はじめに Claude CodeのようなAIコーディングエージェントは便利ですが、APIキーを間違えて会話やファイルに露出させるリスクと常に隣り合わせです。 本記事の元になった事故では、APIキー入りコマンドがなんと発覚まで約7週間（49日）、誰も気づかないまま設定ファイ.
 
 **転用示唆:** 本業
 
-### 9. Python機械学習の基礎固め3冊
-**出典:** Pythonタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/koukyo/items/570476317ffbc7a90642)
+### 5. Claude CodeでAPIキーを漏らさない：権限ポップアップの「今後許可」が秘密を保存していた実録インシデント対応
+**出典:** LLMタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/fukukei23/items/deee2516d6a145ae4af7)
 
-> はじめに 数年前、自分は社内の売上予測モデルの面倒を見る役を引き継いだ。 前任者が残したノートブックは、pandas のメソッドチェーンが延々と並び、最後に RandomForestRegressor を呼ぶだけの構成だった。 ただ、予測が外れ始めた月に「なぜ外.
+> はじめに Claude CodeのようなAIコーディングエージェントは便利ですが、APIキーを間違えて会話やファイルに露出させるリスクと常に隣り合わせです。 本記事の元になった事故では、APIキー入りコマンドがなんと発覚まで約7週間（49日）、誰も気づかないまま設定ファイ.
 
 **転用示唆:** 本業
 
-### 10. .gitignoreの末尾スラッシュはシンボリックリンクに効かない ─ git worktreeで共有したディレクトリが未追跡にならないようにする
-**出典:** 個人開発タグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/itaraiguma/items/1a5ea022fc3e20debbf8)
+### 6. Visual Studio 2026に大型アップデートが到来！
+**出典:** AIタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/axzxs2001/items/e33234f02fc13698289a)
 
-> この記事でできること git worktreeで作業ツリーを分けるとき、メインの作業ディレクトリにある設定やデータのディレクトリをシンボリックリンクで共有することがあります。 gitignoreにshared/のように末尾スラッシュ付きで書いていると、メイン側で.
+> 長年 Visual Studio を使っている開発者、特に C#、. NET Core、C++ の開発に携わっている方にとって、今回の Visual Studio 2026 のアップデートは注目に値します。 Microsoft は Visual Studio .
+
+**転用示唆:** 本業
+
+### 7. Obsidian の中でポモドーロ・BGM・タスクを完結させるプラグイン「Zen Zone」を作りました
+**出典:** 個人開発タグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/chacha260/items/56b5d0f9aa22707b1f28)
+
+> はじめに ポモドーロタイマー、作業用 BGM、タスク管理を、Obsidian のサイドパネルひとつにまとめるプラグイン「Zen Zone」を作りました。 できることは 3 つです。 ポモドーロタイマー:集中と休憩を自動で切り替える BGM:YouTube か.
+
+**転用示唆:** 本業
+
+### 8. 「AIがLinuxの脆弱性を948件見つけた」ニュースから、インフラエンジニアが今見直すべきパッチ管理
+**出典:** AIタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/handson-lab/items/f8505bd8ea5777261b9b)
+
+> ハンズオンラボ運営のえむです。 2026年11月4日、OpenAIが「A thousand fewer paths to root」というタイトルの研究成果を公開しました。 AIを使った自律的な調査パイプラインで、Linuxカーネルの脆弱性候補を洗い出し、そのうち.
+
+**転用示唆:** 本業
+
+### 9. 自作の米国小型株モニタで、EDGARの希薄化書類（S-1 / S-3 / 424B / ATM）を一画面にまとめた話
+**出典:** 個人開発タグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/tradethepinnacle/items/8a27ee3face7fffccf91)
+
+> 米国の小型株を見るときに、EDGAR、フロート、取引停止、ニュースを別々のタブで開くのが煩雑だったので、ティッカーごとに一画面へまとめる無料の公開ベータWebモニタを作りました。 TradeThePinnacleです。 各銘柄では、希薄化に関係するEDGAR書類（S-1、S-.
+
+**転用示唆:** 本業
+
+### 10. pathlibでWindowsとPOSIXのパスを安全に扱う：PureWindowsPathの実測
+**出典:** Pythonタグが付けられた新着記事 - Qiita | [記事リンク](https://qiita.com/warrobotsxyz/items/31fdd709736f7263ccc9)
+
+> はじめに Pythonでパスを扱うとき、文字列連結や os. join ではなく pathlib を使うと、OS差異を意識しやすくなります。 ただし、実行OSと解析対象のパス形式は別です。
 
 **転用示唆:** 本業
 
@@ -82,76 +82,76 @@
 
 ## Zenn Trending
 
-### 1. 96GBのミニPCで大規模MoEを動かしてみた — Radeon 890MとStrataの試行錯誤
-**出典:** Zennの「大規模言語モデル」のフィード | [記事リンク](https://zenn.dev/masahito/articles/4e5af1d32cb2dc)
+### 1. 退職所得控除の重複期間、引き算の順番を間違えていた
+**出典:** Zennの「Python」のフィード | [記事リンク](https://zenn.dev/moneytools_lab/articles/1d533b62bb11a2)
 
-> はじめに 手元のミニPCで、大規模なMoEモデルを動かしてみました。 もともとはllama. cppを使ってローカルLLMを動かしていましたが、もう少し大きなモデルを動かしてみたくなり、Strataという推論エンジンを試してみました。
-
-**転用示唆:** 本業
-
-### 2. GPTBotは0回、OAI-SearchBotは4,847回。AIクローラーを30日間観測して分かったこと
-**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/rimonoa/articles/8974167fe581c2)
-
-> 自分のサイトに、AIのBotはどのくらい来ているのか。 リモノア（https://rimonoa. jp/）でHTTPリクエストを記録してみると、ある30日集計ではOAI-SearchBotが4,847件、GPTBotが0件でした。
+> 個人で iDeCo の受け取り方を試算するシミュレーターを作っています。 その中の退職所得控除の計算に、5か月気付かなかった誤りがありました。 引き算の順番が違う、というだけの話なのですが、条件によっては控除額が数百万円ずれます。
 
 **転用示唆:** 本業
 
-### 3. 「もうちょっと、ここで朝日を浴びときたいわ」を残す介護記録
-**出典:** Zennの「大規模言語モデル」のフィード | [記事リンク](https://zenn.dev/pomodoro_naomi/articles/7b08172f57616a)
+### 2. なぜ、LLM周りのPythonをRustに置き換えた方が良いと主張する人の多くは大きな勘違いをしているのか？
+**出典:** Zennの「大規模言語モデル」のフィード | [記事リンク](https://zenn.dev/pdfractal/articles/b35e1bcd993d81)
 
-> 介護の仕事をしていると、予定の時刻に声をかけても、ご本人にはご本人のタイミングがあるんよね。 いったん見送ったとき、次の職員には「いつ、もう一度お誘いするか」が伝わってほしい。 個別の介護日報には、ご本人がどう過ごしたかったかも残しておきたい。
-
-**転用示唆:** 本業
-
-### 4. 「もうちょっと、ここで朝日を浴びときたいわ」を残す介護記録
-**出典:** Zennの「Python」のフィード | [記事リンク](https://zenn.dev/pomodoro_naomi/articles/7b08172f57616a)
-
-> 介護の仕事をしていると、予定の時刻に声をかけても、ご本人にはご本人のタイミングがあるんよね。 いったん見送ったとき、次の職員には「いつ、もう一度お誘いするか」が伝わってほしい。 個別の介護日報には、ご本人がどう過ごしたかったかも残しておきたい。
+> はじめに 近年、プログラミング言語としてRustの評価が高まっています。 C++に匹敵する実行性能を持ちながら、メモリ安全性や並行処理の安全性を言語仕様によって確保できるという特徴は、システムソフトウェアの開発において大きな魅力です。 そして、生成AIの普及に伴い、LLM（大規模言語モデル）の周辺システムについても、PythonをRustに置き換えた方がよいという主張を耳にするようになりました。
 
 **転用示唆:** 本業
 
-### 5. Claude Codeに「公開」を押させない：CLAUDE.mdに書く「外に出す操作」の決まり5行
-**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/tsugu_sukima/articles/2b19ac59da1b2a)
+### 3. なぜ、LLM周りのPythonをRustに置き換えた方が良いと主張する人の多くは大きな勘違いをしているのか？
+**出典:** Zennの「Python」のフィード | [記事リンク](https://zenn.dev/pdfractal/articles/b35e1bcd993d81)
 
-> この記事でやること Claude Code は、頼まれれば公開に近い操作もそのまま行うことがあります。 筆者が決まりを置かずに「article. md に5行の決まりを書いて、次の3つを Claude Code に守らせます。
-
-**転用示唆:** 本業
-
-### 6. 【初投稿】僕の個人ウェブサイトを公開しました🌟
-**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/kagam_io/articles/7bb21a81e14830)
-
-> はじめに はじめまして、Kagami といいます。 僕はこれまでネットはただ見るだけでした。 人の記事に助けられたり、個人サイトを眺めて「いいな」と思うだけで、自分から何かを発信することはほとんどなかったです。
+> はじめに 近年、プログラミング言語としてRustの評価が高まっています。 C++に匹敵する実行性能を持ちながら、メモリ安全性や並行処理の安全性を言語仕様によって確保できるという特徴は、システムソフトウェアの開発において大きな魅力です。 そして、生成AIの普及に伴い、LLM（大規模言語モデル）の周辺システムについても、PythonをRustに置き換えた方がよいという主張を耳にするようになりました。
 
 **転用示唆:** 本業
 
-### 7. Does a “no-limit” image to video AI page mean unlimited free generatio
-**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/sarabuilds/articles/2b106365722f4d)
+### 4. 作りながら鍛えるコードリーディング力
+**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/gen_tokunaga/articles/bdf9e8e0faf872)
 
-> The “no-limit” in the image to video AI URL is not evidence of unlimited free generations. You can upload a photo and write a prompt without an account, and some models include one free attempt, but later generations use credits, and the price is shown before you generate. This is the right q.
-
-**転用示唆:** 本業
-
-### 8. ClaudeはSAPの「外側」を取りに来た――SheetsとDataが示す、Jouleとの境界線
-**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/dantarg/articles/claude-sheets-data-outside-sap)
-
-> 私は2003年から、SAPの導入と運用、開発の現場にいます。 その間ずっと見てきた光景があります。 SAPの中で作られた数字は、最後は必ずExcelに出ていく、という光景です。
+> 満たしたいこと AIに作らせたコードを自分が理解し、｢いいコードだ｣と銘を打つまでに時間がかかる。 要はコードリーディングが遅い。 効率的に読むにはどうすればいいんだろう。
 
 **転用示唆:** 本業
 
-### 9. ACPを捨てて作り直した ― 他人のAIエージェントに仕事を頼む『sealbridge』をnpm公開した
-**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/acidnyan/articles/5b7c443f14ff89)
+### 5. 時事プローブと公式直結基準でAPI中継のモデル劣化を検知する
+**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/folkbench/articles/c90bdf45161bf2)
 
-> はじめに 以前、他人のClaude CodeやCodexにAPIキーを渡さず仕事を委譲するゼロトラスト基盤「ACP」をOSS公開した という記事を書きました。 あれから開発を進める中で、設計も配布形態も大きく作り直すことになり、後継を sealbridge として公開し直しました。 この記事では、sealbridgeで何ができるか、ACPから何を変えたか、そして実際に「他人のエージェント」へ仕事を投げて完走した記録を紹介します。
+> 原文： Folkbench モデル劣化検知を発表：時事・モデル指紋プローブと独立公式ベースラインによる API 中継の継続検証 モデルのリーダーボードは、公式環境での理論上限を測ります。 アップタイム監視は、エンドポイントが応答するかどうかを見ます。 その経路でも、推論の深さや制約遵守、モデル固有の振る舞いが公式直結のままか、ということです。
 
 **転用示唆:** 本業
 
-### 10. 【House Price】住宅価格予測コンペ前処理編
-**出典:** Zennの「Python」のフィード | [記事リンク](https://zenn.dev/cpp_take/articles/wordpress-000194)
+### 6. 時事プローブと公式直結基準でAPI中継のモデル劣化を検知する
+**出典:** Zennの「大規模言語モデル」のフィード | [記事リンク](https://zenn.dev/folkbench/articles/c90bdf45161bf2)
 
-> 概要 Kaggleのチュートリアルの1つ、house priceのコンペに参加しました。 パラメータの加工に時間かかったので、前処理編として記事にします。 価格の予測となるので、タイタニックやMNISTのようなクラスを予想する分類問題（classification）ではなく、数値を予想する回帰問題（regression）となるのがこのコンペの特徴です。
+> 原文： Folkbench モデル劣化検知を発表：時事・モデル指紋プローブと独立公式ベースラインによる API 中継の継続検証 モデルのリーダーボードは、公式環境での理論上限を測ります。 アップタイム監視は、エンドポイントが応答するかどうかを見ます。 その経路でも、推論の深さや制約遵守、モデル固有の振る舞いが公式直結のままか、ということです。
+
+**転用示唆:** 本業
+
+### 7. LLMが「眠って」重みを書き換える――Googleの論文「Language Models Need Sleep」を読み解く
+**出典:** Zennの「大規模言語モデル」のフィード | [記事リンク](https://zenn.dev/kotakotahiro/articles/894dc35da34848)
+
+> 自分を覚えてくれて、使うほど賢くなっていくように思えるAIエージェントを使っていると、中身の仕組みは分かっているつもりでも、ついつい、AIモデルそのものが学習しているように感じてしまいます。 そんな中で、ふと思いました。 人は当たり前のようにそれを行っていますが、生成AI、LLMにはできないんだろうか？
+
+**転用示唆:** 本業
+
+### 8. Notion AI のチャットの記録が漏れた件について調べてみた — Fireworks AI の事件で、利用者が確かめること
+**出典:** Zennの「大規模言語モデル」のフィード | [記事リンク](https://zenn.dev/pollenjp/articles/2026-11-14-notion-ai-fireworks-incident)
+
+> はじめに 個人で Notion の Business プランを契約して、Notion AI を使っている。 そのワークスペースに、Notion から「取引先の Fireworks AI で起きたセキュリティインシデントで、影響を受けたかもしれない」というメールが届いていた。 この記事では、Notion AI の利用者の側から、漏れた記録に何が入っていたのか、利用者は何を確かめればよいのかを、自分用のメモも兼ねてざっくりまとめる。
+
+**転用示唆:** 本業
+
+### 9. Fireworks AI のセキュリティインシデントについて調べてみた — 何が起き、どこに影響したのか
+**出典:** Zennの「AI」のフィード | [記事リンク](https://zenn.dev/pollenjp/articles/2026-11-10-fireworks-ai-incident)
+
+> はじめに 個人で Notion の Business プランを契約して、Notion AI を使っている。 そのワークスペースに、Notion から「取引先の Fireworks AI で起きたセキュリティインシデントで、影響を受けたかもしれない」というメールが届いていた。 同じ話を、約 24 分の解説動画にもした.
+
+**転用示唆:** 本業
+
+### 10. Fireworks AI のセキュリティインシデントについて調べてみた — 何が起き、どこに影響したのか
+**出典:** Zennの「大規模言語モデル」のフィード | [記事リンク](https://zenn.dev/pollenjp/articles/2026-11-10-fireworks-ai-incident)
+
+> はじめに 個人で Notion の Business プランを契約して、Notion AI を使っている。 そのワークスペースに、Notion から「取引先の Fireworks AI で起きたセキュリティインシデントで、影響を受けたかもしれない」というメールが届いていた。 同じ話を、約 24 分の解説動画にもした.
 
 **転用示唆:** 本業
 
 ---
 
-*Generated by content-hub at 10:12 JST*
+*Generated by content-hub at 10:19 JST*
